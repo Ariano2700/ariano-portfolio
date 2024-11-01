@@ -1,0 +1,103 @@
+---
+import MdiInstagram from "@assets/icons/MaterialDesignIcons/MdiInstagram.astro";
+import MdiKick from "@assets/icons/MaterialDesignIcons/MdiKick.astro";
+import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
+import MdiYoutube from "@assets/icons/MaterialDesignIcons/MdiYoutube.astro";
+import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
+---
+
+<section
+  class="rubik_font text-white flex justify-start items-center p-5 flex-col mt-7 mb-10"
+  id="about_me_section"
+>
+  <div
+    class="flex flex-col justify-center items-start gap-4 w-full max-w-[1120px]"
+  >
+    <h2 class="font-bold text-4xl">
+      Hobbies<span class="text-primary-10 dark:text-primary-5">. </span>
+    </h2>
+    <h3 class="text-lg font-medium italic">
+      Know a little more about me<span
+        class="text-primary-10 dark:text-primary-5"
+        >:
+      </span>
+    </h3>
+    <p class="text-balance w-full">
+      Since I was young, I've always enjoyed playing on consoles and computers,
+      which also sparked my interest in programming. In my free time, I stream
+      on
+      <span
+        class="text-[#53FC18] hover:text-[#55fc188a] transition-all duration-200 ease-in"
+      >
+        <a href="https://kick.com/ariano2700" target="_blank">KICK</a></span
+      >, and I have a deep passion for
+      <span class="text-primary-10 dark:text-primary-5 font-bold">football</span
+      >
+      ; I love analyzing
+      <span class="text-primary-10 dark:text-primary-5 font-bold">football</span
+      >
+      and playing it whenever I get the chance.
+    </p>
+    <p class="flex items-center gap-2">
+      I'm a devoted fan of
+      <span class="text-gradient"> Club Universitario de Deportes </span>
+      <span class="text-lg">
+        <a href="https://universitario.pe/" target="_blank">
+          <UniversitarioIcon />
+        </a>
+      </span>
+    </p>
+  </div>
+  <div class="flex flex-col md:flex-row gap-4 justify-around items-center p-5">
+    <ul
+      class="w-full flex items-center justify-between md:grid md:grid-cols-2 md:w-1/2 text-5xl gap-7"
+    >
+      <li class="text-[#FC136B]">
+        <a href="https://www.instagram.com/elheisenberg27/">
+          <MdiInstagram />
+        </a>
+      </li>
+      <li class="text-gray-400">
+        <a href="https://x.com/27AAriano">
+          <MdiX />
+        </a>
+      </li>
+      <li class="text-[#53FC18] text-4xl">
+        <a href="https://kick.com/ariano2700">
+          <MdiKick />
+        </a>
+      </li>
+      <li class="text-red-500">
+        <a href="https://www.youtube.com/@heisenberg2780">
+          <MdiYoutube />
+        </a>
+      </li>
+    </ul>
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fkick.png?alt=media&token=54a7c31e-3aec-4ee3-8710-1f486e356831"
+      alt="kick ariano"
+      class="w-[500px] min-w-60 rounded-md"
+    />
+  </div>
+</section>
+<style>
+  li {
+    @apply transition-all duration-300 ease-out hover:text-primary-10 dark:hover:text-buttons-5 flex items-center justify-center;
+  }
+  .text-gradient {
+    background: linear-gradient(270deg, #f9efe1, #8c1819);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s infinite linear alternate;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+</style>

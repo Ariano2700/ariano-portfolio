@@ -1,0 +1,28 @@
+---
+import Navbar from "./Navbar.astro";
+import ToggleNavbar from "./toggleComponents/ToggleNavbar.astro";
+---
+
+<header
+id="main-header"
+  class="flex items-center justify-between md:justify-around w-full px-6 border-b-2 text-white shadow fixed z-50 bg-primary-5/10 dark:bg-primary-10/10 filter"
+>
+  <a href="#presentation_section">
+    <img src="/Fonotipo.webp" alt="fonotipo" class="size-28 hidden md:flex" />
+    <img
+      src="/Logotipo.webp"
+      alt="logotipo"
+      class="size-24 p-4 flex md:hidden"
+    />
+  </a>
+  <Navbar />
+  <ToggleNavbar />
+</header>
+<style>
+  #main-header {
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease;
+    backdrop-filter: blur(4px); /* Sin desenfoque por defecto */
+  }
+</style>

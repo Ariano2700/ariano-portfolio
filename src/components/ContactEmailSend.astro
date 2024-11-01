@@ -1,0 +1,127 @@
+---
+
+---
+
+<div class="hidden"></div>
+<div class="flex flex-col items-center justify-center max-lg:w-full">
+  <div class="bg-gray-800 rounded-lg shadow-md p-6 w-full">
+    <h2 class="text-2xl text-center font-bold text-gray-200 mb-4">Contact</h2>
+    <p id="messageSend" class="text-lg py-3"></p>
+    <form class="flex flex-col items-center justify-center max-lg:w-full">
+      <input
+        type="text"
+        id="inputName"
+        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+        placeholder="Full Name"
+      />
+      <input
+        type="email"
+        id="inputEmail"
+        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+        placeholder="Email"
+      />
+      <textarea
+        name="message"
+        id="inputMessage"
+        class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-auto max-lg:w-full lg:w-[500px] h-28 sm:h-36 lg:h-52 focus:bg-gray-md:focus:outline-none:focus:ring-blue-md:focus:border-transparent transition ease-in-out duration-fastest"
+        placeholder="Message"></textarea>
+
+      <button
+        id="sendEmailButton"
+        type="submit"
+        class="w-full bg-gradient-to-r from-primary-10 to-primary-5 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition-all ease-in-out duration-300"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+<style>
+  .toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toast {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: white;
+    animation: fadeOut 3s ease-in-out forwards;
+  }
+
+  .bg-green-500 {
+    background-color: #48bb78;
+  } /* Ejemplo de clase verde */
+  .bg-red-500 {
+    background-color: #f56565;
+  } /* Ejemplo de clase roja */
+
+  @keyframes fadeOut {
+    0%,
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+</style>
+<script>
+  const displayMessage = (message: string, type: "success" | "error") => {
+    const messageSend = document.getElementById("messageSend") as HTMLElement;
+    const color = type === "success" ? "text-green-500" : "text-red-500";
+    messageSend.classList.add(color);
+    if (message) {
+      messageSend.innerText = message;
+    }
+    setTimeout(() => (messageSend.innerText = ""), 3000);
+  };
+
+  const cleanInputs = () => {
+    (document.getElementById("inputName") as HTMLInputElement).value = "";
+    (document.getElementById("inputEmail") as HTMLInputElement).value = "";
+    (document.getElementById("inputMessage") as HTMLTextAreaElement).value = "";
+  };
+  async function sendEmail(event: Event) {
+    event.preventDefault();
+
+    const name = (document.getElementById("inputName") as HTMLInputElement)
+      .value;
+    const email = (document.getElementById("inputEmail") as HTMLInputElement)
+      .value;
+    const message = (
+      document.getElementById("inputMessage") as HTMLTextAreaElement
+    ).value;
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+      const responseMessage = data.message;
+      if (response.ok) {
+        displayMessage(responseMessage, "success");
+        cleanInputs();
+      } else {
+        displayMessage(responseMessage, "error");
+        cleanInputs();
+        console.error(data.error);
+      }
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+      alert("Hubo un error al enviar el correo. Inténtalo de nuevo.");
+    }
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const sendEmailButton = document.getElementById("sendEmailButton");
+    sendEmailButton?.addEventListener("submit", sendEmail);
+  });
+</script>
