@@ -10,7 +10,7 @@ import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
   class="rubik_font text-white flex justify-start items-center p-5 flex-col mt-7 mb-10"
   id="about_me_section"
 >
-  <div
+  <article
     class="flex flex-col justify-center items-start gap-4 w-full max-w-[1120px]"
   >
     <h2 class="font-bold text-4xl">
@@ -47,8 +47,8 @@ import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
         </a>
       </span>
     </p>
-  </div>
-  <div class="flex flex-col md:flex-row gap-4 justify-around items-center p-5">
+  </article>
+  <article class="flex flex-col md:flex-row gap-4 justify-around items-center p-5">
     <ul
       class="w-full flex items-center justify-between md:grid md:grid-cols-2 md:w-1/2 text-5xl gap-7"
     >
@@ -73,12 +73,14 @@ import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
         </a>
       </li>
     </ul>
-    <img
-      src="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fkick.png?alt=media&token=54a7c31e-3aec-4ee3-8710-1f486e356831"
-      alt="kick ariano"
-      class="w-[500px] min-w-60 rounded-md"
-    />
-  </div>
+    <a href="https://kick.com/ariano2700" class="block cursor-pointer">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fkick.png?alt=media&token=54a7c31e-3aec-4ee3-8710-1f486e356831"
+        alt="kick ariano"
+        class="w-[500px] min-w-60 rounded-md"
+      />
+    </a>
+  </article>
 </section>
 <style>
   li {
