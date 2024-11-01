@@ -25,7 +25,7 @@ export type Technology =
 
 export type LinksT = {
   github: string;
-  link_page: string;
+  link_page?: string;
 };
 export interface ProjectsI {
   title: string;
@@ -33,6 +33,6 @@ export interface ProjectsI {
   dateTo: string;
   description: string;
   technology: Technology[];
-  imageUrl: string;
+  imageUrl?: string;
   links: LinksT;
 }

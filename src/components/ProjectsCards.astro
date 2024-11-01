@@ -47,6 +47,7 @@ const techIcons: any = {
   OpenAi: LogosOpenaiIcon,
   Gemini: Gemini,
   Cloudinary: LogosCloudinaryIcon,
+  Astro: "/DeviconAstro.webp",
 };
 /////////////////////
 import MdiGithub from "@assets/icons/MaterialDesignIcons/MdiGithub.astro";
@@ -139,6 +140,18 @@ const projects: ProjectsI[] = [
       link_page: "https://ariano2700.github.io/vigo-bird/",
     },
   },
+  {
+    title: "My Portfolio",
+    titleColor: "text-[#61DAFB]",
+    dateTo: "October 28, 2024",
+    description:
+      "This page is made in Astro. Here is where I show a little about me and my work, my hobbies, etc.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css3"],
+    links: {
+      github: "https://github.com/Ariano2700/ariano-portfolio",
+    },
+    imageUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fportfolio.PNG?alt=media&token=62cc0836-cf75-4e8e-8e7e-2977af4f916b"
+  },
 ];
 ---
 
@@ -163,12 +176,28 @@ const projects: ProjectsI[] = [
           </div>
         </div>
         <div class="flex flex-col gap-4 sm:flex-row items-center text">
-          <img
+          {project.imageUrl ? (
+
+            <figure>
+            <img
             src={project.imageUrl}
             alt={project.title}
             class="w-64 sm:min-w-96 sm:min-h-48 sm:w-96 rounded-md"
-          />
+            />
+          </figure>
+          ): null}
           <ul class="text-6xl flex sm:flex-col justify-center items-center w-full gap-5">
+            {!project.links.link_page ? (
+            <li>
+              <a
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MdiGithub />
+              </a>
+            </li>
+            ):(
             <li>
               <a
                 href={project.links.github}
@@ -187,6 +216,7 @@ const projects: ProjectsI[] = [
                 <GridiconsDomains />
               </a>
             </li>
+            )}
           </ul>
         </div>
       </div>
