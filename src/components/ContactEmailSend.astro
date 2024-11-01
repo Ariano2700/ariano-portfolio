@@ -117,11 +117,10 @@
       }
     } catch (error) {
       console.error("Error al enviar el correo:", error);
-      alert("Hubo un error al enviar el correo. Inténtalo de nuevo.");
     }
   }
   document.addEventListener("DOMContentLoaded", () => {
-    const sendEmailButton = document.getElementById("sendEmailButton");
-    sendEmailButton?.addEventListener("submit", sendEmail);
+    const form = document.querySelector("form");
+    form?.addEventListener("submit", sendEmail);
   });
 </script>

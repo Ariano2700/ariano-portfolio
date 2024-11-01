@@ -101,3 +101,12 @@ Estudiante de Ing. Informática y sistemazzzz"
     border: 1px solid #004e69; /* creates padding around scroll thumb */
   }
 </style>
+<script>
+  import useThemeStore from "@store/theme.store";
+  import type { ThemeState } from "@interfaces/ThemeType";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    useThemeStore.getState().setTheme(savedTheme as ThemeState["theme"]);
+  });
+</script>
