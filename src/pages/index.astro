@@ -2,20 +2,26 @@
 import Presentation from "@components/sections/Presentation.astro";
 import AboutMe from "@components/sections/AboutMe.astro";
 import Layout from "src/layouts/Layout.astro";
-import Projects from "@components/sections/Projects.astro";
 import Hobbies from "@components/sections/Hobbies.astro";
 import ContactMe from "@components/sections/ContactMe.astro";
+import ProjectsNew from "@components/sections/ProjectsNew.astro";
+import Technologies from "@components/sections/Technologies.astro";
+import Education from "@components/sections/Education.astro";
 ---
 
-<Layout title="Ariano Alban">
+<Layout title="Portfolio | Ariano Alban">
   <div class="element">
     <Presentation />
   </div>
-  <div class="element">
-    <Projects />
-  </div>
+  <ProjectsNew />
   <div class="element">
     <AboutMe />
+  </div>
+  <div class="element">
+    <Education />
+  </div>
+  <div class="element">
+    <Technologies />
   </div>
   <div class="element">
     <Hobbies />
@@ -24,8 +30,7 @@ import ContactMe from "@components/sections/ContactMe.astro";
     <ContactMe />
   </div>
 </Layout>
-<style>
-  /* Estilos base */
+<style is:global>
   .element {
     opacity: 0; /* Comienza invisible */
     transform: translateY(20px); /* Desplazado hacia abajo */

@@ -3,6 +3,7 @@ import MdiGithub from "@assets/icons/MaterialDesignIcons/MdiGithub.astro";
 import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
 import MdiInstagram from "@assets/icons/MaterialDesignIcons/MdiInstagram.astro";
 import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
+import { Image } from "astro:assets";
 
 //Script
 ---
@@ -11,17 +12,29 @@ import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
   class="bg-primary-5/10 dark:bg-primary-10/10 border-t-2 borde px-3 py-5 text-white flex flex-col items-center justify-center"
 >
   <div class="flex sm:flex-row flex-col items-center justify-around w-full">
-    <img src="/Logotipo.webp" alt="logotipo" class="size-24 p-4" />
+    <Image
+      width="96"
+      height="96"
+      src="/Logotipo.webp"
+      alt="Logotipo"
+      class="size-24 p-4"
+      loading="lazy"
+    />
     <div class="flex flex-col sm:flex-row gap-2 items-center">
       <h3 class="font-medium text-2xl">Contact me:</h3>
       <ul class="flex gap-5 text-5xl">
         <li>
-          <a href="https://github.com/Ariano2700" target="_blank">
+          <a
+            aria-label="My Github Page"
+            href="https://github.com/Ariano2700"
+            target="_blank"
+          >
             <MdiGithub />
           </a>
         </li>
         <li>
           <a
+            aria-label="My Linkedin Page"
             href="https://www.linkedin.com/in/ariano-selim-alban-gomez-073325332/"
             target="_blank"
           >
@@ -29,19 +42,29 @@ import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/elheisenberg27/" target="_blank">
+          <a
+            aria-label="My Instagram Page"
+            href="https://www.instagram.com/elheisenberg27/"
+            target="_blank"
+          >
             <MdiInstagram />
           </a>
         </li>
         <li>
-          <a href="https://x.com/27AAriano" target="_blank">
+          <a
+            aria-label="My X/Twitter Page"
+            href="https://x.com/27AAriano"
+            target="_blank"
+          >
             <MdiX />
           </a>
         </li>
       </ul>
     </div>
   </div>
-  <p class="text-sm text-gray-700 dark:text-gray-400 mt-5">&copy; 2024 Ariano Alban. All rights reserved</p>
+  <p class="text-sm text-gray-700 dark:text-gray-400 mt-5">
+    &copy; 2025 Ariano Alban. All rights reserved
+  </p>
 </footer>
 <style>
   li {

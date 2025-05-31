@@ -3,13 +3,32 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@interfaces/*": ["src/interfaces/*"],
-      "@firebase/*": ["src/firebase/*"],
-      "@bussines/*": ["src/bussines/*"],
-      "@store/*": ["src/store/*"],
-    }
+      "@const/*": [
+        "src/const/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
+      "@firebase/*": [
+        "src/firebase/*"
+      ],
+      "@bussines/*": [
+        "src/bussines/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

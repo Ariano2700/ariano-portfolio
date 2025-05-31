@@ -4,6 +4,7 @@ import PeruFlag from "@assets/icons/Flags/PeruFlag.astro";
 import EnglangFlag from "@assets/icons/Flags/EnglangFlag.astro";
 import MdiGithub from "@assets/icons/MaterialDesignIcons/MdiGithub.astro";
 import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -30,13 +31,13 @@ import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
     <div class="flex gap-5 items-center justify-around w-full">
       <div class="flex flex-col gap-5 items-center">
         <a
-          href="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/curriculum-vitae%2FCurriculum%20Vitae%20-%20Ariano%20Alban%20-%20ES.pdf?alt=media&token=671e317c-6a51-402d-bf40-339d20eb439d"
+          href="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/curriculum-vitae%2FCurriculum%20Vitae%20-%20Ariano%20Alban%20-%20ES.pdf?alt=media&token=f1f05ee2-6d28-48a5-8ed9-f1a153dde9e9"
           target="_blank"
           class="rounded-md border border-buttons-5 hover:bg-primary-10 dark:hover:bg-primary-5 transition-all duration-300 ease-out flex items-center gap-2 text-white p-3 text-base"
           >Resume <PeruFlag />
         </a>
         <a
-          href="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/curriculum-vitae%2FCurriculum%20Vitae%20-%20Ariano%20Alban%20-%20EN.pdf?alt=media&token=2d949360-3dba-4a9d-8230-c416cd935177"
+          href="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/curriculum-vitae%2FCurriculum%20Vitae%20-%20Ariano%20Alban%20-%20EN.pdf?alt=media&token=0c13eb67-41ea-4d20-b7cb-5a63a7a90e19"
           target="_blank"
           class="rounded-md border border-buttons-5 hover:bg-primary-10 dark:hover:bg-primary-5 transition-all duration-300 ease-out flex items-center gap-2 text-white p-3 text-base"
           >Resume <EnglangFlag />
@@ -44,7 +45,11 @@ import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
       </div>
       <ul class="flex gap-5 flex-col text-5xl text-white">
         <li>
-          <a href="https://github.com/Ariano2700" target="_blank">
+          <a
+            href="https://github.com/Ariano2700"
+            target="_blank"
+            aria-label="Profile GitHub"
+          >
             <MdiGithub />
           </a>
         </li>
@@ -52,6 +57,7 @@ import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
           <a
             href="https://www.linkedin.com/in/ariano-selim-alban-gomez-073325332/"
             target="_blank"
+            aria-label="Profile LinkedIn"
           >
             <MdiLinkedin />
           </a>
@@ -59,10 +65,13 @@ import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
       </ul>
     </div>
   </div>
-  <img
-    src="/ProfileImage.png"
-    alt="Profile Image - Ariano"
-    class="rounded-full w-48 sm:w-64 mt-16 sm:mt-0"
+  <Image
+    src="/ProfileImage.webp"
+    alt="Profile Ariano"
+    width="192"
+    height="300"
+    class="rounded-full w-48 mt-16 sm:w-64 sm:mt-0"
+    loading="eager"
   />
 </section>
 <style>

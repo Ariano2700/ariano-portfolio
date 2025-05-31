@@ -2,26 +2,29 @@ export interface TechI {
   icon: string;
   name: string;
 }
-export type Technology =
-  | "Html5"
-  | "Css3"
-  | "JavaScript"
-  | "TypeScript"
-  | "React"
-  | "NodeJS"
-  | "Express"
-  | "Firebase"
-  | "Tailwindcss"
-  | "Astro"
+export type TechnologyT =
   | "Java"
   | "MySQL"
   | "NestJS"
+  | "NodeJS"
   | "PostgreSQL"
   | "Python"
+  | "Figma"
+  | "Firebase"
+  | "Git"
+  | "JWT"
+  | "Photoshop"
+  | "JavaScript"
+  | "NextJS"
+  | "React"
+  | "Tailwindcss"
+  | "TypeScript"
+  | "Html5"
+  | "Css"
   | "OpenAi"
   | "Gemini"
   | "Cloudinary"
-  | "NextJS";
+  | "Astro";
 
 export type LinksT = {
   github: string;
@@ -32,7 +35,7 @@ export interface ProjectsI {
   titleColor: string;
   dateTo: string;
   description: string;
-  technology: Technology[];
+  technology: TechnologyT[];
   imageUrl?: string;
   links: LinksT;
 }

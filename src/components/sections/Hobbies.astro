@@ -4,6 +4,7 @@ import MdiKick from "@assets/icons/MaterialDesignIcons/MdiKick.astro";
 import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
 import MdiYoutube from "@assets/icons/MaterialDesignIcons/MdiYoutube.astro";
 import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -42,42 +43,62 @@ import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
       I'm a devoted fan of
       <span class="text-gradient"> Club Universitario de Deportes </span>
       <span class="text-lg">
-        <a href="https://universitario.pe/" target="_blank">
+        <a
+          aria-label="Universitario page"
+          href="https://universitario.pe/"
+          target="_blank"
+        >
           <UniversitarioIcon />
         </a>
       </span>
     </p>
   </article>
-  <article class="flex flex-col md:flex-row gap-4 justify-around items-center p-5">
+  <article
+    class="flex flex-col md:flex-row gap-4 justify-around items-center p-5"
+  >
     <ul
       class="w-full flex items-center justify-between md:grid md:grid-cols-2 md:w-1/2 text-5xl gap-7"
     >
       <li class="text-[#FC136B]">
-        <a href="https://www.instagram.com/elheisenberg27/">
+        <a
+          aria-label="My Instagram Page"
+          href="https://www.instagram.com/elheisenberg27/"
+        >
           <MdiInstagram />
         </a>
       </li>
       <li class="text-gray-400">
-        <a href="https://x.com/27AAriano">
+        <a aria-label="My X / Twitter Page" href="https://x.com/27AAriano">
           <MdiX />
         </a>
       </li>
       <li class="text-[#53FC18] text-4xl">
-        <a href="https://kick.com/ariano2700">
+        <a aria-label="My Kick Page" href="https://kick.com/ariano2700">
           <MdiKick />
         </a>
       </li>
       <li class="text-red-500">
-        <a href="https://www.youtube.com/@heisenberg2780">
+        <a
+          aria-label="My Youtube"
+          href="https://www.youtube.com/@heisenberg2780"
+        >
           <MdiYoutube />
         </a>
       </li>
     </ul>
-    <a href="https://kick.com/ariano2700" target="_blank" class="block cursor-pointer">
-      <img
+    <a
+      aria-label="Mi Kick Page"
+      href="https://kick.com/ariano2700"
+      target="_blank"
+      class="block cursor-pointer"
+    >
+      <Image
+        width="500"
+        height="270"
         src="https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fkick.png?alt=media&token=54a7c31e-3aec-4ee3-8710-1f486e356831"
         alt="kick ariano"
         class="w-[500px] min-w-60 rounded-md"
+        loading="lazy"
       />
     </a>
   </article>

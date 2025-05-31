@@ -1,5 +1,5 @@
 ---
-import Technologies from "@components/Technologies.astro";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -20,9 +20,9 @@ import Technologies from "@components/Technologies.astro";
         passionate about technology and continuous learning. I specialize in creating
         <span class="text-primary-10 dark:text-primary-5 font-bold"
           >innovative solutions</span
-        > in both frontend and backend, and I enjoy exploring new tools and
-        technologies to optimize each project. In addition to my technical skills,
-        I possess strong soft skills such as <span
+        > in both frontend and backend, and I enjoy exploring new tools and technologies
+        to optimize each project. In addition to my technical skills, I possess strong
+        soft skills such as <span
           class="text-primary-10 dark:text-primary-5 font-bold"
           >effective communication</span
         >,
@@ -48,35 +48,13 @@ import Technologies from "@components/Technologies.astro";
       dinámicos y orientados a resultados. -->
       </p>
     </div>
-    <img src="/dev.webp" alt="dev image" class="sm:size-80 size-60" />
+    <Image
+      height="240"
+      width="240"
+      src="/dev.webp"
+      alt="dev"
+      class="sm:size-80 size-60"
+      loading="lazy"
+    />
   </div>
-  <div
-    class="flex flex-col justify-center items-start gap-10 w-full max-w-[1120px]"
-  >
-    <div class="flex flex-col justify-start items-start">
-      <h3 class="font-medium text-2xl text-start">
-        Education<span class="text-primary-10 dark:text-primary-5">: </span>
-      </h3>
-      <div class="flex items-center gap-2 px-2 mb-2">
-        <div class="rounded-full bg-primary-10 dark:bg-primary-5 size-2"></div>
-        <h4 class="font-light text-slate-100 text-xl">
-          Computer and systems engineering
-        </h4>
-      </div>
-      <div class="px-6">
-        <p class="font-light text-slate-100">
-          <i> Universidad Tecnologíca del Perú </i>
-        </p>
-        <p class="text-balance font-light text-slate-100">
-          <i>2021 - Present</i>
-        </p>
-      </div>
-    </div>
-    <div class="flex flex-col justify-start items-start mb-6">
-      <h3 class="font-medium text-2xl text-start">
-        Technologies<span class="text-primary-10 dark:text-primary-5">: </span>
-      </h3>
-    </div>
-  </div>
-  <Technologies />
 </section>

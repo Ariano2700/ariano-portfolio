@@ -1,0 +1,161 @@
+---
+import {
+  backendTech,
+  extrasTech,
+  frontendTech,
+  officeTech,
+} from "@const/techIcons";
+import { Image } from "astro:assets";
+---
+
+<section
+  class="rubik_font text-white flex justify-start items-center p-5 flex-col mt-5"
+  id="technologies_section"
+>
+  <article
+    class="flex flex-col justify-center items-start gap-4 w-full max-w-[1120px]"
+  >
+    <div class="flex flex-col justify-start items-start mb-6">
+      <h2 class="font-bold text-4xl">
+        Technologies<span class="text-primary-10 dark:text-primary-5">. </span>
+      </h2>
+    </div>
+    <div
+      class="w-full flex flex-col lg:flex-row items-center justify-center gap-7 text-base sm:text-2xl max-w-[1120px]"
+    >
+      <div class="flex flex-col justify-center items-center gap-3 mb-3 w-full">
+        <h2 class="text-3xl text-gradient">Frontend</h2>
+        <ul
+          id="frontend_tech"
+          class="p-5 rounded-xl border dark:border-primary-5 border-primary-10 grid grid-cols-3 sm:grid-cols-4 w-full gap-10"
+        >
+          {
+            frontendTech.map((tech) => (
+              <li class="">
+                <figure class="flex flex-col gap-2 items-center justify-center">
+                  <Image
+                    width="56"
+                    height="56"
+                    src={tech.icon}
+                    alt={`${tech.name}`}
+                    class="size-14"
+                  />
+                  <figcaption>{tech.name}</figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-3 mb-3 w-full">
+        <h2 class="text-3xl text-gradient">Backend</h2>
+        <ul
+          id="frontend_tech"
+          class="p-5 rounded-xl border dark:border-primary-5 border-primary-10 grid grid-cols-3 sm:grid-cols-4 w-full gap-10"
+        >
+          {
+            backendTech.map((tech) => (
+              <li class="">
+                <figure class="flex flex-col gap-2 items-center justify-center">
+                  <Image
+                    width="56"
+                    height="56"
+                    src={tech.icon}
+                    alt={`${tech.name}`}
+                    class="size-14"
+                  />
+                  <figcaption>{tech.name}</figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div
+      class="w-full flex flex-col lg:flex-row items-center justify-center gap-7 text-base sm:text-2xl max-w-[1120px] mt-5"
+    >
+      <div class="flex flex-col justify-center items-center gap-3 mb-3 w-full">
+        <h2 class="text-3xl text-gradient-office">Office Tools</h2>
+        <ul
+          id="frontend_tech"
+          class="p-5 rounded-xl border dark:border-primary-5 border-primary-10 grid grid-cols-3 sm:grid-cols-4 w-full gap-10 lg:min-w-[546px] lg:min-h-[274px]"
+        >
+          {
+            officeTech.map((tech) => (
+              <li class="">
+                <figure class="flex flex-col gap-2 items-center justify-center">
+                  <Image
+                    width="56"
+                    height="56"
+                    src={tech.icon}
+                    alt={`${tech.name}`}
+                    class="size-14"
+                  />
+                  <figcaption>{tech.name}</figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-3 mb-3 w-full">
+        <h2 class="text-3xl text-gradient-extras">Extras</h2>
+        <ul
+          id="frontend_tech"
+          class="p-5 rounded-xl border dark:border-primary-5 border-primary-10 grid grid-cols-3 sm:grid-cols-4 w-full gap-10"
+        >
+          {
+            extrasTech.map((tech) => (
+              <li class="">
+                <figure class="flex flex-col gap-2 items-center justify-center text-center">
+                  <Image
+                    width="56"
+                    height="56"
+                    src={tech.icon}
+                    alt={`${tech.name}`}
+                    class="size-14"
+                  />
+                  <figcaption>{tech.name}</figcaption>
+                </figure>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(270deg, #00d5fbb7, #087599);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 2s infinite linear alternate;
+  }
+  .text-gradient-extras {
+    background: linear-gradient(270deg, #fdb548, #c47909);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 2s infinite linear alternate;
+  }
+  .text-gradient-office {
+    background: linear-gradient(270deg, #3c66c0, #25cf7a);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 2s infinite linear alternate;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+</style>

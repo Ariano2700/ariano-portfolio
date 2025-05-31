@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section
+  class="rubik_font text-white flex justify-start items-center p-5 flex-col mt-5"
+  id="education_section"
+>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-10 w-full max-w-[1120px]">
+    <div class="flex flex-col justify-start items-start">
+      <h2 class="font-bold text-4xl">
+        Education<span class="text-primary-10 dark:text-primary-5">. </span>
+      </h2>
+      <div class="flex items-center gap-2 px-2 mb-2">
+        <div class="rounded-full bg-primary-10 dark:bg-primary-5 size-2"></div>
+        <h4 class="font-light text-slate-100 text-xl">
+          Computer and systems engineering
+        </h4>
+      </div>
+      <div class="px-6">
+        <p class="font-light text-slate-100 text-lg">
+          <i> Universidad Tecnologíca del Perú </i>
+        </p>
+        <p class="text-balance font-light text-slate-100 text-lg">
+          <i>2021 - Present</i>
+        </p>
+      </div>
+    </div>
+    <Image
+      height="240"
+      width="240"
+      src="/utp.png"
+      alt="UTP Logo"
+      class="sm:size-80 size-60 object-contain"
+      loading="lazy"
+    />
+  </div>
+</section>
