@@ -1,35 +1,35 @@
 import type { TechI, TechnologyT } from "@interfaces/TechInterface";
 
-import Java from "@assets/icons/TechIcons/Backend/Java.svg?url";
-import MySQL from "@assets/icons/TechIcons/Backend/MySQL.svg?url";
-import NestJS from "@assets/icons/TechIcons/Backend/NestJs.svg?url";
-import NodeJS from "@assets/icons/TechIcons/Backend/NodeJS.svg?url";
-import PostgreSQL from "@assets/icons/TechIcons/Backend/PostgreSQL.svg?url";
-import Python from "@assets/icons/TechIcons/Backend/Python.svg?url";
+import Java from "@assets/icons/TechIcons/Backend/Java.svg";
+import MySQL from "@assets/icons/TechIcons/Backend/MySQL.svg";
+import NestJS from "@assets/icons/TechIcons/Backend/NestJs.svg";
+import NodeJS from "@assets/icons/TechIcons/Backend/NodeJS.svg";
+import PostgreSQL from "@assets/icons/TechIcons/Backend/PostgreSQL.svg";
+import Python from "@assets/icons/TechIcons/Backend/Python.svg";
 
-import Figma from "@assets/icons/TechIcons/Extras/Figma.svg?url";
-import Firebase from "@assets/icons/TechIcons/Extras/Firebase.svg?url";
-import Git from "@assets/icons/TechIcons/Extras/Git.svg?url";
-import JWT from "@assets/icons/TechIcons/Extras/JWT.svg?url";
-import Photoshop from "@assets/icons/TechIcons/Extras/Photoshop.svg?url";
+import Figma from "@assets/icons/TechIcons/Extras/Figma.svg";
+import Firebase from "@assets/icons/TechIcons/Extras/Firebase.svg";
+import Git from "@assets/icons/TechIcons/Extras/Git.svg";
+import JWT from "@assets/icons/TechIcons/Extras/JWT.svg";
+import Photoshop from "@assets/icons/TechIcons/Extras/Photoshop.svg";
 
-import Javascript from "@assets/icons/TechIcons/Frontend/Javascript.svg?url";
-import NextJS from "@assets/icons/TechIcons/Frontend/NextJS.svg?url";
-import React from "@assets/icons/TechIcons/Frontend/React.svg?url";
-import Tailwindcss from "@assets/icons/TechIcons/Frontend/Tailwindcss.svg?url";
-import Typescript from "@assets/icons/TechIcons/Frontend/Typescript.svg?url";
-import Html5 from "@assets/icons/TechIcons/Frontend/Html5.svg?url";
-import Css from "@assets/icons/TechIcons/Frontend/Css.png?url";
+import Javascript from "@assets/icons/TechIcons/Frontend/Javascript.svg";
+import NextJS from "@assets/icons/TechIcons/Frontend/NextJS.svg";
+import React from "@assets/icons/TechIcons/Frontend/React.svg";
+import Tailwindcss from "@assets/icons/TechIcons/Frontend/Tailwindcss.svg";
+import Typescript from "@assets/icons/TechIcons/Frontend/Typescript.svg";
+import Html5 from "@assets/icons/TechIcons/Frontend/Html5.svg";
+import Css from "@assets/icons/TechIcons/Frontend/Css.png";
 
-import Gemini from "@assets/icons/SVG Logos/Gemini.svg?url";
-import LogosCloudinaryIcon from "@assets/icons/SVG Logos/LogosCloudinaryIcon.svg?url";
-import LogosOpenaiIcon from "@assets/icons/SVG Logos/LogosOpenaiIcon.svg?url";
+import Gemini from "@assets/icons/SVG Logos/Gemini.svg";
+import LogosCloudinaryIcon from "@assets/icons/SVG Logos/LogosCloudinaryIcon.svg";
+import LogosOpenaiIcon from "@assets/icons/SVG Logos/LogosOpenaiIcon.svg";
 
-import Word from "@assets/icons/TechIcons/Office/word.png?url";
-import Ppt from "@assets/icons/TechIcons/Office/ppt.png?url";
-import Excel from "@assets/icons/TechIcons/Office/excel.png?url";
+import Word from "@assets/icons/TechIcons/Office/word.png";
+import Ppt from "@assets/icons/TechIcons/Office/ppt.png";
+import Excel from "@assets/icons/TechIcons/Office/excel.png";
 
-export const techIcons: Record<TechnologyT, string> = {
+export const techIcons: Record<TechnologyT, ImageMetadata | string> = {
   Java: Java,
   MySQL: MySQL,
   NestJS: NestJS,

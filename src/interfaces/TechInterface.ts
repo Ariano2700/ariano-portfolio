@@ -1,5 +1,7 @@
+import type { ImageMetadata } from "astro";
+
 export interface TechI {
-  icon: string;
+  icon: ImageMetadata | string;
   name: string;
 }
 export type TechnologyT =
