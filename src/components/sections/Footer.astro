@@ -6,6 +6,7 @@ import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
 import { Image } from "astro:assets";
 
 //Script
+const year = new Date().getFullYear();
 ---
 
 <footer
@@ -63,7 +64,7 @@ import { Image } from "astro:assets";
     </div>
   </div>
   <p class="text-sm text-gray-700 dark:text-gray-400 mt-5">
-    &copy; 2025 Ariano Alban. All rights reserved
+    &copy; {year} Ariano Alban. All rights reserved
   </p>
 </footer>
 <style>
