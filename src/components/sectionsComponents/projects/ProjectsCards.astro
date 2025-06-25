@@ -46,15 +46,15 @@ import { techIcons } from "@const/techIcons";
           </figure>
           ): null}
           <ul class="text-6xl flex sm:flex-col justify-center items-center w-full gap-5">
-            {!project.links.link_page ? (
+            {!project.links.github ? (
             <li>
               <a
-                href={project.links.github}
+                href={project.links.link_page}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${project.title} Repository`}
+                aria-label={`${project.title} Page`}
               >
-                <MdiGithub />
+                <GridiconsDomains />
               </a>
             </li>
             ):(

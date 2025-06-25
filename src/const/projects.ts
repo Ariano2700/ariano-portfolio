@@ -107,6 +107,25 @@ export const projects: ProjectsI[] = [
       link_page: "https://ariano2700.github.io/vigo-bird/",
     },
   },
+  {
+    title: "Capture The Moment",
+    titleColor: "text-cyan-500",
+    dateTo: "June 24, 2025",
+    description:
+      "Capture the Moment is a landing page designed to showcase a photography service. It features a modern and elegant design, with sections highlighting the services offered, a gallery of photos, and a contact form for inquiries.",
+    technology: [
+      "Astro",
+      "TypeScript",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "Photoshop",
+    ],
+    imageUrl: "/capture-landing.PNG",
+    links: {
+      link_page: "capture-landing.netlify.app",
+    },
+  },
   // {
   //   title: "My Portfolio",
   //   titleColor: "text-[#61DAFB]",

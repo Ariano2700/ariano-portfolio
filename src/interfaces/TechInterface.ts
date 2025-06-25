@@ -29,7 +29,7 @@ export type TechnologyT =
   | "Astro";
 
 export type LinksT = {
-  github: string;
+  github?: string;
   link_page?: string;
 };
 export interface ProjectsI {
