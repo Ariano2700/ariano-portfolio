@@ -41,7 +41,7 @@ export const projects: ProjectsI[] = [
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fmikhuy%20landing.PNG?alt=media&token=643151eb-14db-4d31-9007-9193fbbd535b",
     links: {
-      github: "https://github.com/Ariano2700/mikhuy-landing-astro",
+      // github: "https://github.com/Ariano2700/mikhuy-landing-astro",
       link_page: "https://mikhuy-ld.netlify.app/",
     },
   },
@@ -76,7 +76,7 @@ export const projects: ProjectsI[] = [
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FMochisGallery.webp?alt=media&token=ee370ce9-df08-4131-a432-d7fc14a12ac9",
     links: {
-      github: "https://github.com/Ariano2700/image-gallery",
+      // github: "https://github.com/Ariano2700/image-gallery",
       link_page: "https://image-gallery-three-murex.vercel.app/",
     },
   },
@@ -89,7 +89,7 @@ export const projects: ProjectsI[] = [
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FGIF-project.webp?alt=media&token=d8cdd478-8965-48ea-b2a7-e29d117e32a6",
     links: {
-      github: "https://github.com/Ariano2700/GIF-Project",
+      // github: "https://github.com/Ariano2700/GIF-Project",
       link_page: "https://ariano2700.github.io/GIF-Project/",
     },
   },

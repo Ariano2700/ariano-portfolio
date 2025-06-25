@@ -5,9 +5,13 @@ import { projects } from "@const/projects";
 import { techIcons } from "@const/techIcons";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+
+const numberOfProjectsContainer = projects.length * 100;
 ---
 
-<section class="relative h-[800vh]" id="projects_section">
+<section
+  class={`relative h-[${numberOfProjectsContainer}vh]" id="projects_section`}
+>
   <section
     class="sticky top-0 h-screen z-0 flex items-center justify-center text-white"
   >
@@ -50,10 +54,13 @@ import { Image } from "astro:assets";
       <section
         class={`sticky top-0 h-screen z-[${10 + index}] flex items-center justify-center bg-center bg-cover bg-no-repeat relative`}
       >
-        <img
+        <Image
           src={project.imageUrl!}
           alt={project.title}
           class="absolute inset-0 w-full h-full object-cover -z-10"
+          width={1920}
+          height={1080}
+          title={project.title}
           loading="lazy"
         />
         {/* Overlay opcional para mejor legibilidad */}
@@ -89,6 +96,8 @@ import { Image } from "astro:assets";
                       src={techIcons[tech] as ImageMetadata}
                       alt={tech}
                       class="w-8 h-8"
+                      loading="lazy"
+                      title={tech}
                     />
                   </div>
                   <span class="text-sm text-gray-300">{tech}</span>
@@ -98,24 +107,44 @@ import { Image } from "astro:assets";
 
             {/* Enlaces */}
             <div class="flex justify-center items-center gap-8">
-              <a
-                href={project.links.github}
-                class="text-xl flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 backdrop-blur-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MdiGithub />
-                <span>GitHub</span>
-              </a>
-              <a
-                href={project.links.link_page}
-                class="text-xl flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 backdrop-blur-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GridiconsDomains />
-                <span>Page</span>
-              </a>
+              {!project.links.github ? (
+                <a
+                  href={project.links.link_page}
+                  aria-label={`${project.title} Project Page`}
+                  title={`${project.title} Project Page`}
+                  class="text-xl flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GridiconsDomains />
+                  <span>Page</span>
+                </a>
+              ) : (
+                <>
+                  <a
+                    href={project.links.github}
+                    aria-label={`${project.title} GitHub Repository`}
+                    title={`${project.title} GitHub Repository`}
+                    class="text-xl flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MdiGithub />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href={project.links.link_page}
+                    aria-label={`${project.title} Project Page`}
+                    title={`${project.title} Project Page`}
+                    class="text-xl flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 backdrop-blur-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GridiconsDomains />
+                    <span>Page</span>
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>

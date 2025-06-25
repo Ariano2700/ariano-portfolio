@@ -8,7 +8,11 @@ import ToggleNavbar from "../toggleComponents/ToggleNavbar.astro";
   id="main-header"
   class="flex items-center justify-between md:justify-around w-full px-6 border-b-2 text-white shadow fixed z-50 bg-primary-5/10 dark:bg-primary-10/10 filter"
 >
-  <a href="#presentation_section">
+  <a
+    href="#presentation_section"
+    aria-label="Go to home section"
+    title="Go to home section"
+  >
     <Image
       src="/Fonotipo.webp"
       width="80"
@@ -16,6 +20,7 @@ import ToggleNavbar from "../toggleComponents/ToggleNavbar.astro";
       alt="Fonotipo"
       class="hidden md:flex"
       loading="lazy"
+      title={"Ariano Alban Logo"}
     />
     <Image
       src="/Logotipo.webp"
@@ -24,6 +29,7 @@ import ToggleNavbar from "../toggleComponents/ToggleNavbar.astro";
       alt="Logotipo"
       class="p-4 flex md:hidden"
       loading="lazy"
+      title={"Ariano Alban Logo"}
     />
   </a>
   <Navbar />

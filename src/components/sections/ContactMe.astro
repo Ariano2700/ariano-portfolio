@@ -5,7 +5,7 @@ import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
 import ContactEmailSend from "@components/sectionsComponents/contactMe/ContactEmailSend.astro";
 ---
 
-<section
+<div
   class="rubik_font text-white flex justify-start items-center p-5 flex-col"
   id="contact_section"
 >
@@ -33,6 +33,7 @@ import ContactEmailSend from "@components/sectionsComponents/contactMe/ContactEm
               href="https://github.com/Ariano2700"
               target="_blank"
               aria-label="Profile GitHub"
+              title="Profile GitHub"
             >
               <MdiGithub />
             </a>
@@ -42,6 +43,7 @@ import ContactEmailSend from "@components/sectionsComponents/contactMe/ContactEm
               href="https://www.linkedin.com/in/ariano-selim-alban-gomez-073325332/"
               target="_blank"
               aria-label="Profile LinkedIn"
+              title="Profile LinkedIn"
             >
               <MdiLinkedin />
             </a>
@@ -51,7 +53,7 @@ import ContactEmailSend from "@components/sectionsComponents/contactMe/ContactEm
     </div>
     <ContactEmailSend />
   </div>
-</section>
+</div>
 <style>
   li {
     @apply transition-all duration-300 ease-out hover:text-primary-10 dark:hover:text-buttons-5 flex items-center justify-center;
