@@ -1,4 +1,5 @@
 ---
+import LenisScroll from "@assets/lenis/LenisScroll";
 import Footer from "@components/footer/Footer.astro";
 import Header from "@components/header/Header.astro";
 
@@ -71,6 +72,7 @@ Estudiante de Ing. Informática y sistemazzzz"
   </head>
 
   <body class="bg-light bg-dark min-h-screen montserrat_font scroll-smooth">
+    <LenisScroll client:load />
     <Header />
     <main class="py-2 h-full">
       <slot />
