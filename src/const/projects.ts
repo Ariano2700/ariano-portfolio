@@ -16,8 +16,9 @@ export const projects: ProjectsI[] = [
       "Cloudinary",
       "Firebase",
     ],
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FbloodyRoom.webp?alt=media&token=58bf7a78-3581-43bd-9c09-b6503a394ec4",
+    imageUrl: "/projects/bloodyRoom.webp",
+    // imageUrl:
+    //   "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FbloodyRoom.webp?alt=media&token=58bf7a78-3581-43bd-9c09-b6503a394ec4",
     links: {
       github: "https://github.com/PurpleSavage/hackathon-midu-bloody-room",
       link_page: "https://hackathon-midu-bloody-room.vercel.app/",
@@ -38,8 +39,8 @@ export const projects: ProjectsI[] = [
       "TypeScript",
       "Photoshop",
     ],
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fmikhuy%20landing.PNG?alt=media&token=643151eb-14db-4d31-9007-9193fbbd535b",
+    imageUrl: "/projects/mikhuy-landing.webp",
+    // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fmikhuy%20landing.PNG?alt=media&token=643151eb-14db-4d31-9007-9193fbbd535b",
     links: {
       // github: "https://github.com/Ariano2700/mikhuy-landing-astro",
       link_page: "https://mikhuy-ld.netlify.app/",
@@ -52,8 +53,8 @@ export const projects: ProjectsI[] = [
     description:
       "Landing page and savings plan calculator developed for a UNMSM group using Gemini to improve decision making.",
     technology: ["NextJS", "Gemini", "TypeScript", "NodeJS", "Tailwindcss"],
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fsavingplans.webp?alt=media&token=d5c1b786-e767-4a5e-bd28-168f70392046",
+    imageUrl: "/projects/savings-plan.webp",
+    // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fsavingplans.webp?alt=media&token=d5c1b786-e767-4a5e-bd28-168f70392046",
     links: {
       github: "https://github.com/Ar2700/savings-plan-claudia",
       link_page: "https://tu-plan-de-ahorro.vercel.app/",
@@ -73,8 +74,8 @@ export const projects: ProjectsI[] = [
       "Cloudinary",
       "Firebase",
     ],
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FMochisGallery.webp?alt=media&token=ee370ce9-df08-4131-a432-d7fc14a12ac9",
+    imageUrl: "/projects/mochis-gallery.webp",
+    // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FMochisGallery.webp?alt=media&token=ee370ce9-df08-4131-a432-d7fc14a12ac9",
     links: {
       // github: "https://github.com/Ariano2700/image-gallery",
       link_page: "https://image-gallery-three-murex.vercel.app/",
@@ -86,8 +87,8 @@ export const projects: ProjectsI[] = [
     dateTo: "December 3, 2023",
     description: "Project developed with React using GIPHY API",
     technology: ["JavaScript", "React", "Tailwindcss"],
-    imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FGIF-project.webp?alt=media&token=d8cdd478-8965-48ea-b2a7-e29d117e32a6",
+    imageUrl: "/projects/gif-project.webp",
+    // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FGIF-project.webp?alt=media&token=d8cdd478-8965-48ea-b2a7-e29d117e32a6",
     links: {
       // github: "https://github.com/Ariano2700/GIF-Project",
       link_page: "https://ariano2700.github.io/GIF-Project/",
@@ -121,7 +122,7 @@ export const projects: ProjectsI[] = [
       "Html5",
       "Photoshop",
     ],
-    imageUrl: "/capture-landing.PNG",
+    imageUrl: "/projects/capture-landing.webp",
     links: {
       link_page: "capture-landing.netlify.app",
     },
