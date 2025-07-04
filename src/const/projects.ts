@@ -102,7 +102,8 @@ export const projects: ProjectsI[] = [
       "Flappy bird clone project made with Canvas and javascript, adding sounds and local point counter.",
     technology: ["JavaScript", "Css", "Html5"],
     imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FFlapyVigo.webp?alt=media&token=e93425a4-f119-472a-912f-d53cc3e8dcff",
+    "/projects/flappy-bird-clone.webp",
+      // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FFlapyVigo.webp?alt=media&token=e93425a4-f119-472a-912f-d53cc3e8dcff",
     links: {
       github: "https://github.com/Ariano2700/vigo-bird",
       link_page: "https://ariano2700.github.io/vigo-bird/",
