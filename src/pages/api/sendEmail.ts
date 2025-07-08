@@ -3,19 +3,29 @@ export const prerender = false;
 import brevo from "@getbrevo/brevo";
 
 export async function POST({ request }: { request: Request }) {
-  const { name, email, message } = await request.json();
-  const apiInstance = new brevo.TransactionalEmailsApi();
-  apiInstance.setApiKey(
-    brevo.TransactionalEmailsApiApiKeys.apiKey,
-    import.meta.env.BREVO_API_KEY
-  );
+  try {
+    const { name, email, message } = await request.json();
+    if (!name || !email || !message) {
+      return new Response(
+        JSON.stringify({
+          message: "Name, email, and message are required",
+          status: 400,
+        }),
+        { status: 400 }
+      );
+    }
+    const apiInstance = new brevo.TransactionalEmailsApi();
+    apiInstance.setApiKey(
+      brevo.TransactionalEmailsApiApiKeys.apiKey,
+      import.meta.env.BREVO_API_KEY
+    );
 
-  const sendSmtpEmail = new brevo.SendSmtpEmail();
-  sendSmtpEmail.subject = `${name} te ha escrito desde tu portfolio web`;
-  sendSmtpEmail.to = [
-    { email: "arianoalban2004@gmail.com", name: "Ariano Alban" },
-  ];
-  sendSmtpEmail.htmlContent = `
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.subject = `${name} te ha escrito desde tu portfolio web`;
+    sendSmtpEmail.to = [
+      { email: "arianoalban2004@gmail.com", name: "Ariano Alban" },
+    ];
+    sendSmtpEmail.htmlContent = `
     <html>
       <body style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 0; margin: 0;">
         <table width="100%" cellpadding="0" cellspacing="0" style="background: #f9f9f9; padding: 40px 0;">
@@ -49,12 +59,15 @@ export async function POST({ request }: { request: Request }) {
       </body>
     </html>
   `;
-  sendSmtpEmail.sender = { email: "arianoalban2004@gmail.com", name };
+    sendSmtpEmail.sender = { email: "arianoalban2004@gmail.com", name };
 
-  try {
     const result = await apiInstance.sendTransacEmail(sendSmtpEmail);
     return new Response(
-      JSON.stringify({ message: "Email successfully sent", result, status: 200 }),
+      JSON.stringify({
+        message: "Email successfully sent",
+        result,
+        status: 200,
+      }),
       {
         status: 200,
       }
