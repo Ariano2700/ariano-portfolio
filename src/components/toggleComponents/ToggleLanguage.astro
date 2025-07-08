@@ -1,20 +1,35 @@
 ---
 import PeruFlag from "@assets/icons/Flags/PeruFlag.astro";
 import EnglangFlag from "@assets/icons/Flags/EnglangFlag.astro";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+// Calcula la ruta base sin /en
+const basePath = isEnglish ? pathname.replace(/^\/en/, "") || "/" : pathname;
 ---
 
 <div class="text-lg language-selector gap-2">
   <div
     class="flex flex-col items-center relative transition-all duration-300 cursor-pointer"
   >
-    <button value="en" id="en_button" class="language_button">
-      EN
-      <EnglangFlag class="text-lg" />
-    </button>
-    <button value="es" id="es_button" class="language_button">
-      ES
-      <PeruFlag class="text-lg" />
-    </button>
+    {
+      isEnglish ? (
+        <a href={basePath} class="language_button" title="English">
+          EN
+          <EnglangFlag class="text-lg" />
+        </a>
+      ) : (
+        <a
+          href={`/en${basePath === "/" ? "" : basePath}`}
+          class="language_button"
+          title="Español"
+        >
+          ES
+          <PeruFlag class="text-lg" />
+        </a>
+      )
+    }
   </div>
 </div>
 <style>
@@ -33,40 +48,7 @@ import EnglangFlag from "@assets/icons/Flags/EnglangFlag.astro";
     background: transparent;
     font-size: 1rem;
     cursor: pointer;
-  }
-
-  .hidden {
-    display: none !important;
-  }
-
-  .rotate {
-    transform: rotate(180deg);
+    text-decoration: none;
+    color: inherit;
   }
 </style>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const en_button = document.getElementById("en_button");
-    const es_button = document.getElementById("es_button");
-
-    // Cambiar idioma y ocultar el botón seleccionado
-    en_button?.addEventListener("click", (event) => {
-      event.stopPropagation();
-      setLanguage("es");
-    });
-
-    es_button?.addEventListener("click", (event) => {
-      event.stopPropagation();
-      setLanguage("en");
-    });
-
-    function setLanguage(language: string) {
-      localStorage.setItem("language-page", language);
-      en_button?.classList.toggle("hidden", language === "es");
-      es_button?.classList.toggle("hidden", language === "en");
-    }
-
-    // Cargar idioma guardado y actualizar visualmente
-    const savedLanguage = localStorage.getItem("language-page") || "en";
-    setLanguage(savedLanguage);
-  });
-</script>

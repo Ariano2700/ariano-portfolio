@@ -16,7 +16,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="I'm Ariano Alban, a junior Full Stack developer passionate about technology and continuous learning. I specialize in creating innovative solutions in both frontend and backend."
+      content="I'm Ariano Alban, a developer passionate about technology and continuous learning. I specialize in creating innovative solutions in both frontend and backend."
     />
     <meta
       name="google-site-verification"
@@ -30,7 +30,7 @@ const { title } = Astro.props;
     <link rel="canonical" href="https://arianoalban.netlify.app/" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <title>Ariano Alban | Portfolio | Full Stack Developer | Portafolio</title>
+    <title>Ariano Alban | {title}</title>
 
     <!-- Keywords for SEO -->
     <meta
@@ -41,11 +41,11 @@ const { title } = Astro.props;
     <meta name="author" content="Ariano Alban" />
     <meta
       property="og:title"
-      content="Ariano Alban | Portfolio | Full Stack Developer | Portafolio"
+      content="Ariano Alban | Portfolio | Developer | Portafolio"
     />
     <meta
       property="og:description"
-      content="I'm Ariano Alban, a junior Full Stack developer passionate about technology and continuous learning."
+      content="I'm Ariano Alban, a developer passionate about technology and continuous learning."
     />
     <meta
       property="og:image"
@@ -71,7 +71,7 @@ Estudiante de Ing. Informática y sistemazzzz"
     />
   </head>
 
-  <body class="bg-light bg-dark min-h-screen montserrat_font scroll-smooth">
+  <body class="bg-page min-h-screen montserrat_font scroll-smooth">
     <LenisScroll client:load />
     <Header />
     <main class="py-2 h-full">
@@ -82,13 +82,11 @@ Estudiante de Ing. Informática y sistemazzzz"
 </html>
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-  .bg-light {
-    @apply bg-gradient-to-br from-blue-600 to-cyan-700;
+  
+  .bg-page {
+    @apply bg-gradient-to-br from-black to-cyan-700;
   }
 
-  .bg-dark {
-    @apply dark:bg-gradient-to-br dark:from-slate-500 dark:to-indigo-900;
-  }
   .montserrat_font {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -120,7 +118,7 @@ Estudiante de Ing. Informática y sistemazzzz"
   import type { ThemeState } from "@interfaces/ThemeType";
 
   document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    useThemeStore.getState().setTheme(savedTheme as ThemeState["theme"]);
+    // const savedTheme = localStorage.getItem("theme") || "light";
+    // useThemeStore.getState().setTheme(savedTheme as ThemeState["theme"]);
   });
 </script>

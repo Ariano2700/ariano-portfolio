@@ -26,7 +26,7 @@ export const projects: ProjectsI[] = [
   },
   {
     title: "Mikhuy landing page",
-    titleColor: "text-amber-800",
+    titleColor: "text-red-300",
     dateTo: "May 25, 2025",
     description:
       "Home page of Mikhuy's project, a university cafeteria manager, a group project that is about to be deployed.",
@@ -62,7 +62,7 @@ export const projects: ProjectsI[] = [
   },
   {
     title: "My Mochis Galley",
-    titleColor: "text-pink-500",
+    titleColor: "text-pink-400",
     dateTo: "October 16, 2023",
     description:
       "Image gallery that has been made with Firebase and cloudinary for image storage, integration with Spotify as well.",
@@ -101,9 +101,8 @@ export const projects: ProjectsI[] = [
     description:
       "Flappy bird clone project made with Canvas and javascript, adding sounds and local point counter.",
     technology: ["JavaScript", "Css", "Html5"],
-    imageUrl:
-    "/projects/flappy-bird-clone.webp",
-      // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FFlapyVigo.webp?alt=media&token=e93425a4-f119-472a-912f-d53cc3e8dcff",
+    imageUrl: "/projects/flappy-bird-clone.webp",
+    // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FFlapyVigo.webp?alt=media&token=e93425a4-f119-472a-912f-d53cc3e8dcff",
     links: {
       github: "https://github.com/Ariano2700/vigo-bird",
       link_page: "https://ariano2700.github.io/vigo-bird/",
@@ -141,4 +140,123 @@ export const projects: ProjectsI[] = [
   //   imageUrl:
   //     "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fportfolio.PNG?alt=media&token=62cc0836-cf75-4e8e-8e7e-2977af4f916b",
   // },
+];
+
+export const projectsEs: ProjectsI[] = [
+  {
+    title: "Bloody Room",
+    titleColor: "text-red-500",
+    dateTo: "9 de octubre de 2024",
+    description:
+      "Aplicación web temática de Halloween donde los usuarios pueden registrarse y reciben 4 tokens por día para subir 4 imágenes y cambiar sus fondos.",
+    technology: [
+      "NextJS",
+      "OpenAi",
+      "TypeScript",
+      "NodeJS",
+      "Tailwindcss",
+      "Cloudinary",
+      "Firebase",
+    ],
+    imageUrl: "/projects/bloodyRoom.webp",
+    links: {
+      github: "https://github.com/PurpleSavage/hackathon-midu-bloody-room",
+      link_page: "https://hackathon-midu-bloody-room.vercel.app/",
+    },
+  },
+  {
+    title: "Mikhuy landing page",
+    titleColor: "text-red-300",
+    dateTo: "25 de mayo de 2025",
+    description:
+      "Página principal del proyecto Mikhuy, un gestor de cafetería universitaria, proyecto grupal que está por ser desplegado.",
+    technology: [
+      "Astro",
+      "React",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "TypeScript",
+      "Photoshop",
+    ],
+    imageUrl: "/projects/mikhuy-landing.webp",
+    links: {
+      link_page: "https://mikhuy-ld.netlify.app/",
+    },
+  },
+  {
+    title: "Savings plan UNMSM",
+    titleColor: "text-green-500",
+    dateTo: "3 de octubre de 2024",
+    description:
+      "Landing page y calculadora de plan de ahorro desarrollada para un grupo de la UNMSM usando Gemini para mejorar la toma de decisiones.",
+    technology: ["NextJS", "Gemini", "TypeScript", "NodeJS", "Tailwindcss"],
+    imageUrl: "/projects/savings-plan.webp",
+    links: {
+      github: "https://github.com/Ar2700/savings-plan-claudia",
+      link_page: "https://tu-plan-de-ahorro.vercel.app/",
+    },
+  },
+  {
+    title: "My Mochis Galley",
+    titleColor: "text-pink-400",
+    dateTo: "16 de octubre de 2023",
+    description:
+      "Galería de imágenes realizada con Firebase y Cloudinary para el almacenamiento de imágenes, además de integración con Spotify.",
+    technology: [
+      "NextJS",
+      "TypeScript",
+      "NodeJS",
+      "Tailwindcss",
+      "Cloudinary",
+      "Firebase",
+    ],
+    imageUrl: "/projects/mochis-gallery.webp",
+    links: {
+      link_page: "https://image-gallery-three-murex.vercel.app/",
+    },
+  },
+  {
+    title: "GIF-Project",
+    titleColor: "text-cyan-500",
+    dateTo: "3 de diciembre de 2023",
+    description: "Proyecto desarrollado con React usando la API de GIPHY.",
+    technology: ["JavaScript", "React", "Tailwindcss"],
+    imageUrl: "/projects/gif-project.webp",
+    links: {
+      link_page: "https://ariano2700.github.io/GIF-Project/",
+    },
+  },
+  {
+    title: "Flappy-bird clone",
+    titleColor: "text-yellow-500",
+    dateTo: "7 de octubre de 2023",
+    description:
+      "Clon de Flappy Bird realizado con Canvas y JavaScript, agregando sonidos y contador de puntos local.",
+    technology: ["JavaScript", "Css", "Html5"],
+    imageUrl: "/projects/flappy-bird-clone.webp",
+    links: {
+      github: "https://github.com/Ariano2700/vigo-bird",
+      link_page: "https://ariano2700.github.io/vigo-bird/",
+    },
+  },
+  {
+    title: "Capture The Moment",
+    titleColor: "text-cyan-500",
+    dateTo: "24 de junio de 2025",
+    description:
+      "Capture the Moment es una landing page diseñada para mostrar un servicio de fotografía. Presenta un diseño moderno y elegante, con secciones que destacan los servicios ofrecidos, una galería de fotos y un formulario de contacto para consultas.",
+    technology: [
+      "Astro",
+      "TypeScript",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "Photoshop",
+    ],
+    imageUrl: "/projects/capture-landing.webp",
+    links: {
+      link_page: "capture-landing.netlify.app",
+    },
+  },
 ];
