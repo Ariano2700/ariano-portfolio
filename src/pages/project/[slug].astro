@@ -1,0 +1,22 @@
+---
+import ProjectDetails from "@components/sections/ProjectDetails.astro";
+import { projectsEs } from "@const/projects";
+import Layout from "src/layouts/Layout.astro";
+export async function getStaticPaths() {
+  return projectsEs.map((project) => ({
+    params: { slug: project.title.replace(/\s+/g, "-").toLowerCase() },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = projectsEs.find(
+  (p) => p.title.replace(/\s+/g, "-").toLowerCase() === slug
+);
+if (!project) {
+  throw new Error("Project not found");
+}
+---
+
+<Layout title="Portafolio | Desarrollador">
+  <ProjectDetails project={project} />
+</Layout>

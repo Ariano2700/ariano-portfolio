@@ -1,37 +1,45 @@
 ---
-
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+const titleLabel = isEnglish ? "Contact" : "Contacto";
+const buttonLabel = isEnglish ? "Send" : "Enviar";
+const nameLabelPlaceholder = isEnglish ? "Full Name" : "Nombre Completo";
+const emailLabelPlaceholder = isEnglish ? "Email" : "Correo Electrónico";
+const messageLabelPlaceholder = isEnglish ? "Message" : "Mensaje";
 ---
 
 <div class="hidden"></div>
 <div class="flex flex-col items-center justify-center max-lg:w-full">
   <div class="bg-gray-800 rounded-lg shadow-md p-6 w-full">
-    <h2 class="text-2xl text-center font-bold text-gray-200 mb-4">Contact</h2>
+    <h2 class="text-2xl text-center font-bold text-gray-200 mb-4">
+      {titleLabel}
+    </h2>
     <p id="messageSend" class="text-lg py-3"></p>
     <form class="flex flex-col items-center justify-center max-lg:w-full">
       <input
         type="text"
         id="inputName"
         class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
-        placeholder="Full Name"
+        placeholder={nameLabelPlaceholder}
       />
       <input
         type="email"
         id="inputEmail"
         class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
-        placeholder="Email"
+        placeholder={emailLabelPlaceholder}
       />
       <textarea
         name="message"
         id="inputMessage"
         class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-auto max-lg:w-full lg:w-[500px] h-28 sm:h-36 lg:h-52 focus:bg-gray-md:focus:outline-none:focus:ring-blue-md:focus:border-transparent transition ease-in-out duration-fastest"
-        placeholder="Message"></textarea>
+        placeholder={messageLabelPlaceholder}></textarea>
 
       <button
         id="sendEmailButton"
         type="submit"
         class="w-full bg-gradient-to-r from-primary-10 to-primary-5 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition-colors ease-in duration-300"
       >
-        Send
+        {buttonLabel}
       </button>
     </form>
   </div>

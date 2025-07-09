@@ -23,6 +23,8 @@ export const projects: ProjectsI[] = [
       github: "https://github.com/PurpleSavage/hackathon-midu-bloody-room",
       link_page: "https://hackathon-midu-bloody-room.vercel.app/",
     },
+    about:
+      "This project was developed using modern best practices. It leverages Next.js, OpenAI, and cloud services to provide a fun, interactive Halloween experience where users can personalize images daily. The stack ensures scalability, security, and a smooth user experience.",
   },
   {
     title: "Mikhuy landing page",
@@ -45,6 +47,8 @@ export const projects: ProjectsI[] = [
       // github: "https://github.com/Ariano2700/mikhuy-landing-astro",
       link_page: "https://mikhuy-ld.netlify.app/",
     },
+    about:
+      "A landing page for Mikhuy, a university cafeteria manager. Built with Astro and React, it features a modern UI, responsive design, and easy navigation. The project demonstrates teamwork and integration of multiple frontend technologies for a real-world solution.",
   },
   {
     title: "Savings plan UNMSM",
@@ -59,6 +63,8 @@ export const projects: ProjectsI[] = [
       github: "https://github.com/Ar2700/savings-plan-claudia",
       link_page: "https://tu-plan-de-ahorro.vercel.app/",
     },
+    about:
+      "A savings plan calculator and landing page for a UNMSM group. Developed with Next.js and Gemini, it helps users make informed financial decisions. The project focuses on usability, accessibility, and clear data presentation.",
   },
   {
     title: "My Mochis Galley",
@@ -80,6 +86,8 @@ export const projects: ProjectsI[] = [
       // github: "https://github.com/Ariano2700/image-gallery",
       link_page: "https://image-gallery-three-murex.vercel.app/",
     },
+    about:
+      "A gallery app using Firebase and Cloudinary for image storage, plus Spotify integration. Built with Next.js and TypeScript, it offers a seamless experience for uploading and viewing images, highlighting cloud storage and third-party API integration.",
   },
   {
     title: "GIF-Project",
@@ -93,6 +101,8 @@ export const projects: ProjectsI[] = [
       // github: "https://github.com/Ariano2700/GIF-Project",
       link_page: "https://ariano2700.github.io/GIF-Project/",
     },
+    about:
+      "A React project using the GIPHY API to search and display GIFs. It demonstrates API consumption, responsive design, and interactive UI elements, making it a fun and educational frontend project.",
   },
   {
     title: "Flappy-bird clone",
@@ -107,6 +117,8 @@ export const projects: ProjectsI[] = [
       github: "https://github.com/Ariano2700/vigo-bird",
       link_page: "https://ariano2700.github.io/vigo-bird/",
     },
+    about:
+      "A Flappy Bird clone built with Canvas and JavaScript. Features sound effects and a local score counter. This project showcases game development basics, animation, and user interaction in the browser.",
   },
   {
     title: "Capture The Moment",
@@ -126,6 +138,8 @@ export const projects: ProjectsI[] = [
     links: {
       link_page: "capture-landing.netlify.app",
     },
+    about:
+      "A modern landing page for a photography service. Built with Astro and TypeScript, it features elegant design, a photo gallery, and a contact form. The project emphasizes visual appeal and user engagement.",
   },
   // {
   //   title: "My Portfolio",
@@ -163,6 +177,8 @@ export const projectsEs: ProjectsI[] = [
       github: "https://github.com/PurpleSavage/hackathon-midu-bloody-room",
       link_page: "https://hackathon-midu-bloody-room.vercel.app/",
     },
+    about:
+      "Este proyecto fue desarrollado utilizando las mejores prácticas de desarrollo moderno. Combina Next.js, OpenAI y servicios en la nube para ofrecer una experiencia divertida e interactiva de Halloween, permitiendo a los usuarios personalizar imágenes diariamente. La arquitectura garantiza escalabilidad, seguridad y una experiencia fluida.",
   },
   {
     title: "Mikhuy landing page",
@@ -183,6 +199,8 @@ export const projectsEs: ProjectsI[] = [
     links: {
       link_page: "https://mikhuy-ld.netlify.app/",
     },
+    about:
+      "Landing page para Mikhuy, gestor de cafetería universitaria. Desarrollada con Astro y React, presenta una interfaz moderna, diseño responsivo y navegación sencilla. El proyecto destaca el trabajo en equipo y la integración de tecnologías frontend para una solución real.",
   },
   {
     title: "Savings plan UNMSM",
@@ -196,6 +214,8 @@ export const projectsEs: ProjectsI[] = [
       github: "https://github.com/Ar2700/savings-plan-claudia",
       link_page: "https://tu-plan-de-ahorro.vercel.app/",
     },
+    about:
+      "Calculadora de ahorro y landing page para un grupo de la UNMSM. Desarrollada con Next.js y Gemini, ayuda a los usuarios a tomar decisiones financieras informadas. El proyecto se centra en la usabilidad, accesibilidad y presentación clara de datos.",
   },
   {
     title: "My Mochis Galley",
@@ -215,6 +235,8 @@ export const projectsEs: ProjectsI[] = [
     links: {
       link_page: "https://image-gallery-three-murex.vercel.app/",
     },
+    about:
+      "Galería de imágenes usando Firebase y Cloudinary para almacenamiento, con integración de Spotify. Hecha con Next.js y TypeScript, permite subir y ver imágenes fácilmente, destacando el uso de almacenamiento en la nube e integración de APIs externas.",
   },
   {
     title: "GIF-Project",
@@ -226,6 +248,8 @@ export const projectsEs: ProjectsI[] = [
     links: {
       link_page: "https://ariano2700.github.io/GIF-Project/",
     },
+    about:
+      "Proyecto en React que utiliza la API de GIPHY para buscar y mostrar GIFs. Demuestra consumo de APIs, diseño responsivo y elementos interactivos, siendo un proyecto frontend divertido y educativo.",
   },
   {
     title: "Flappy-bird clone",
@@ -239,6 +263,8 @@ export const projectsEs: ProjectsI[] = [
       github: "https://github.com/Ariano2700/vigo-bird",
       link_page: "https://ariano2700.github.io/vigo-bird/",
     },
+    about:
+      "Clon de Flappy Bird realizado con Canvas y JavaScript. Incluye efectos de sonido y contador de puntos local. Este proyecto muestra conceptos básicos de desarrollo de juegos, animación e interacción en el navegador.",
   },
   {
     title: "Capture The Moment",
@@ -258,5 +284,7 @@ export const projectsEs: ProjectsI[] = [
     links: {
       link_page: "capture-landing.netlify.app",
     },
+    about:
+      "Landing page moderna para un servicio de fotografía. Desarrollada con Astro y TypeScript, presenta un diseño elegante, galería de fotos y formulario de contacto. El proyecto enfatiza el atractivo visual y la interacción con el usuario.",
   },
 ];

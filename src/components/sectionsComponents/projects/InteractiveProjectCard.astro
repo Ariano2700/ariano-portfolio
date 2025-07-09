@@ -1,0 +1,113 @@
+---
+interface Props {
+  projects: ProjectsI[];
+}
+const { projects } = Astro.props;
+import MdiGithub from "@assets/icons/MaterialDesignIcons/MdiGithub.astro";
+import GridiconsDomains from "@assets/icons/Gridicons/GridiconsDomains.astro";
+import { Image } from "astro:assets";
+import { techIcons } from "@const/techIcons";
+import type { ProjectsI } from "@interfaces/TechInterface";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const pathUrl = isEnglish ? "/en/project/" : "/project/";
+const moreLabel = isEnglish ? "more" : "más";
+const buttonLabel = isEnglish ? "View project" : "Ver proyecto";
+---
+
+<div
+  class="max-w-[1120px] mx-auto grid grid-cols-1 min-[1180px]:grid-cols-2 gap-8 mt-5"
+>
+  {
+    projects.map((project) => (
+      <a
+        href={`${pathUrl}${project.title.replace(/\s+/g, "-").toLowerCase()}`}
+        aria-label={`View project ${project.title}`}
+        title={`View project ${project.title}`}
+        class="group relative block"
+      >
+        <article class="relative min-h-[440px] bg-gray-900/50 border border-cyan-500/20 rounded-2xl overflow-hidden transition-all duration-500 hover:border-cyan-400/60 cursor-pointer">
+          <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <div class="relative h-48 overflow-hidden">
+            <Image
+              src={project.imageUrl as string}
+              alt={project.title}
+              width="500"
+              height="192"
+              class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+              title={project.title}
+              loading="lazy"
+            />
+          </div>
+
+          <div class="p-6 relative">
+            <header>
+              <div class="flex items-center gap-2 mb-2 transition-all duration-300 group-hover:translate-x-2">
+                <span class="text-xs text-cyan-400">{project.dateTo}</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent">
+                {project.title}
+              </h3>
+            </header>
+            <p class="text-gray-300 text-sm mb-4 transition-all duration-300 group-hover:text-gray-200">
+              {project.description}
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.technology.slice(0, 5).map((tech, index) => (
+                <span
+                  class="transition-all duration-300"
+                  style={`transition-delay: ${index * 50}ms; transform: translateY(0px);`}
+                >
+                  <Image
+                    src={techIcons[tech] as ImageMetadata}
+                    alt={tech}
+                    width="28"
+                    height="28"
+                    class="inline-block align-middle"
+                    title={tech}
+                    loading="lazy"
+                  />
+                </span>
+              ))}
+              {project.technology.length > 5 && (
+                <span class="text-xs text-gray-400 py-1">
+                  +{project.technology.length - 5} {moreLabel}
+                </span>
+              )}
+            </div>
+            <footer class="flex items-center justify-between transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 translate-y-2 opacity-70">
+              <div class="flex items-center justify-between gap-5">
+                <span class="text-2xl p-2 bg-gray-900/80 rounded-full hover:bg-gray-800 transition-colors border border-gray-600">
+                  <MdiGithub className="text-white" />
+                </span>
+                <span class="text-2xl p-2 bg-cyan-600/80 rounded-full hover:bg-cyan-500 transition-colors">
+                  <GridiconsDomains className="text-white" />
+                </span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-cyan-400 font-medium">
+                  {buttonLabel}
+                </span>
+                <svg
+                  class="text-cyan-400 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </div>
+            </footer>
+          </div>
+        </article>
+      </a>
+    ))
+  }
+</div>

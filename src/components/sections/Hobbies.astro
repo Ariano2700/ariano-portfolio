@@ -5,6 +5,29 @@ import MdiX from "@assets/icons/MaterialDesignIcons/MdiX.astro";
 import MdiYoutube from "@assets/icons/MaterialDesignIcons/MdiYoutube.astro";
 import UniversitarioIcon from "@assets/icons/UniversitarioIcon.astro";
 import { Image } from "astro:assets";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const subtitleLabel = isEnglish
+  ? "Know a little more about me"
+  : "Conoce un poco sobre mis hobbies";
+const firstDescriptionLabel = isEnglish
+  ? "Since I was young, I've always enjoyed playing on consoles and computers, which also sparked my interest in programming. In my free time, I stream on"
+  : "Desde joven, siempre he disfrutado jugar en consolas y computadoras, lo que también despertó mi interés por la programación. En mi tiempo libre, hago streaming en";
+const secondDescriptionLabel = isEnglish
+  ? "and I have a deep passion for"
+  : "y tengo una profunda pasión por";
+const footballLabel = isEnglish ? "football" : "el fútbol";
+const thirdDescriptionLabel = isEnglish
+  ? " I love analyzing"
+  : " me encanta analizar";
+const fourthDescriptionLabel = isEnglish
+  ? "and playing it whenever I get the chance."
+  : "y jugarlo siempre que tengo la oportunidad.";
+const fifthDescriptionLabel = isEnglish
+  ? "I'm a devoted fan of"
+  : "También soy un fanático devoto de";
 ---
 
 <div
@@ -18,15 +41,10 @@ import { Image } from "astro:assets";
       Hobbies<span class="text-primary-10 dark:text-primary-5">. </span>
     </h2>
     <h3 class="text-lg font-medium italic">
-      Know a little more about me<span
-        class="text-primary-10 dark:text-primary-5"
-        >:
-      </span>
+      {subtitleLabel}<span class="text-primary-10 dark:text-primary-5">: </span>
     </h3>
     <p class="text-balance w-full">
-      Since I was young, I've always enjoyed playing on consoles and computers,
-      which also sparked my interest in programming. In my free time, I stream
-      on
+      {firstDescriptionLabel}
       <span
         class="text-[#53FC18] hover:text-[#55fc188a] transition-all duration-200 ease-in"
       >
@@ -36,16 +54,16 @@ import { Image } from "astro:assets";
           title="My Kick Page"
           target="_blank">KICK</a
         ></span
-      >, and I have a deep passion for
-      <span class="text-primary-10 dark:text-primary-5 font-bold">football</span
+      >, {secondDescriptionLabel}
+      <span class="text-primary-10 dark:text-primary-5 font-bold"
+        >{footballLabel}</span
       >
-      ; I love analyzing
-      <span class="text-primary-10 dark:text-primary-5 font-bold">football</span
-      >
-      and playing it whenever I get the chance.
+      ; {thirdDescriptionLabel}
+
+      {fourthDescriptionLabel}
     </p>
     <p class="flex items-center gap-2">
-      I'm a devoted fan of
+      {fifthDescriptionLabel}
       <span class="text-gradient"> Club Universitario de Deportes </span>
       <span class="text-lg">
         <a

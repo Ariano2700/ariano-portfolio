@@ -40,4 +40,5 @@ export interface ProjectsI {
   technology: TechnologyT[];
   imageUrl?: string;
   links: LinksT;
+  about?: string;
 }

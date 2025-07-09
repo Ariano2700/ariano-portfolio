@@ -1,7 +1,18 @@
 ---
 import OcticonThreeBars16 from "@assets/icons/Octicons/OcticonThreeBars16.astro";
 import OcticonX12 from "@assets/icons/Octicons/OcticonX12.astro";
-import ToggleThemeButton from "./ToggleThemeButton.astro";
+import { navItems } from "@const/navItems";
+import ToggleLanguage from "./ToggleLanguage.astro";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const isHome = pathname === (isEnglish ? "/en/" : "/");
+const basePath = isEnglish ? "/en/" : "/";
+const items = (isEnglish ? navItems.en : navItems.es).map((item) => ({
+  ...item,
+  href: isHome ? item.href : basePath + item.href,
+}));
 ---
 
 <div class="flex md:hidden relative">
@@ -21,51 +32,22 @@ import ToggleThemeButton from "./ToggleThemeButton.astro";
     </div>
     <div class="text-lg text-nowrap">
       <ul class="flex flex-col gap-5 items-center justify-center">
-        <li>
-          <a
-            href="#presentation_section"
-            aria-label="Go to home section"
-            title="Go to home section">Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="#projects_section"
-            aria-label="Go to projects section"
-            title="Go to projects section">Projects</a
-          >
-        </li>
-        <li>
-          <a
-            href="#about_me_section"
-            aria-label="Go to about me section"
-            title="Go to about me section">About me</a
-          >
-        </li>
-        <li>
-          <a
-            href="#technologies_section"
-            aria-label="Go to technologies section"
-            title="Go to technologies section">Technologies</a
-          >
-        </li>
-        <!-- <li>
-          <a
-            href="#services_section"
-            aria-label="Go to services section"
-            title="Go to services section">Services</a
-          >
-        </li> -->
-        <li>
-          <a
-            href="#contact_section"
-            aria-label="Go to contact section"
-            title="Go to contact section">Contact</a
-          >
-        </li>
+        {
+          items.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                aria-label={`Go to ${item.label.toLowerCase()} section`}
+                title={`Go to ${item.label.toLowerCase()} section`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
-    <!-- <ToggleThemeButton /> -->
+    <ToggleLanguage />
   </nav>
 </div>
 <script>

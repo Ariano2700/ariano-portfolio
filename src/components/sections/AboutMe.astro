@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const titleLabel = isEnglish ? "About me" : "Sobre mi";
+const descriptionLabel = isEnglish
+  ? `I'm <span class="text-primary-10 dark:text-primary-5 font-bold">Ariano Alban</span>, a <span class="text-primary-10 dark:text-primary-5 font-bold">junior Full Stack developer</span> passionate about technology and continuous learning. I specialize in creating <span class="text-primary-10 dark:text-primary-5 font-bold">innovative solutions</span> in both frontend and backend, and I enjoy exploring new tools and technologies to optimize each project. In addition to my technical skills, I possess strong soft skills such as <span class="text-primary-10 dark:text-primary-5 font-bold">effective communication</span>, <span class="text-primary-10 dark:text-primary-5 font-bold">teamwork</span>, and <span class="text-primary-10 dark:text-primary-5 font-bold">problem-solving</span>, which enable me to adapt and collaborate <span class="text-[#c47909] dark:text-[#fdb548] font-bold">efficiently in dynamic</span>, <span class="text-[#c47909] dark:text-[#fdb548] font-bold">results-oriented work environments</span>.`
+  : `Soy <span class="text-primary-10 dark:text-primary-5 font-bold">Ariano Alban</span>, un <span class="text-primary-10 dark:text-primary-5 font-bold">desarrollador Full Stack junior</span> apasionado por la tecnología y el aprendizaje continuo. Me especializo en la creación de <span class="text-primary-10 dark:text-primary-5 font-bold">soluciones innovadoras</span> tanto en el frontend como en el backend, y disfruto explorando nuevas herramientas y tecnologías para optimizar cada proyecto. Además de mis habilidades técnicas, poseo sólidas habilidades blandas como <span class="text-primary-10 dark:text-primary-5 font-bold">comunicación efectiva</span>, <span class="text-primary-10 dark:text-primary-5 font-bold">trabajo en equipo</span>, y <span class="text-primary-10 dark:text-primary-5 font-bold">resolución de problemas</span>, lo que me permite adaptarme y colaborar <span class="text-[#c47909] dark:text-[#fdb548] font-bold">eficientemente en entornos</span>, <span class="text-[#c47909] dark:text-[#fdb548] font-bold">orientados a resultados</span>.`;
+---
+
+<div
+  class="rubik_font text-white flex justify-start items-center p-5 flex-col mt-5"
+  id="about_me_section"
+>
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <div class="flex flex-col justify-center max-w-[800px]">
+      <h2 class="font-bold text-4xl">
+        {titleLabel}<span class="text-primary-10 dark:text-primary-5">. </span>
+      </h2>
+      <p class="text-balance" set:html={descriptionLabel} />
+    </div>
+    <Image
+      height="240"
+      width="240"
+      src="/dev.webp"
+      alt="dev"
+      class="sm:size-80 size-60"
+      loading="lazy"
+      title="Ariano Alban Dev Icon"
+    />
+  </div>
+</div>

@@ -1,5 +1,15 @@
 ---
 import { Image } from "astro:assets";
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+const titleLabel = isEnglish ? "Education" : "Educación";
+const educationLabel = isEnglish
+  ? "Computer and systems engineering"
+  : "Ingeniería de sistemas";
+const universityLabel = isEnglish
+  ? "Universidad Tecnológica del Perú"
+  : "Universidad Tecnologíca del Perú";
+const dateLabel = isEnglish ? "2021 - Present" : "2021 - Presente";
 ---
 
 <div
@@ -11,20 +21,20 @@ import { Image } from "astro:assets";
   >
     <div class="flex flex-col justify-start items-start">
       <h2 class="font-bold text-4xl">
-        Educación<span class="text-primary-10 dark:text-primary-5">. </span>
+        {titleLabel}<span class="text-primary-10 dark:text-primary-5">. </span>
       </h2>
       <div class="flex items-center gap-2 px-2 mb-2">
         <div class="rounded-full bg-primary-10 dark:bg-primary-5 size-2"></div>
         <h4 class="font-light text-slate-100 text-xl">
-          Ingeniería de sistemas
+          {educationLabel}
         </h4>
       </div>
       <div class="px-6">
         <p class="font-light text-slate-100 text-lg">
-          <i> Universidad Tecnologíca del Perú </i>
+          <i> {universityLabel} </i>
         </p>
         <p class="text-balance font-light text-slate-100 text-lg">
-          <i>2021 - Presente</i>
+          <i>{dateLabel}</i>
         </p>
       </div>
     </div>

@@ -2,7 +2,14 @@
 import MdiGithub from "@assets/icons/MaterialDesignIcons/MdiGithub.astro";
 import MdiGmail from "@assets/icons/MaterialDesignIcons/MdiGmail.astro";
 import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
-import ContactEmailSend from "@components/es/sectionsComponents/contactMe/ContactEmailSend.astro";
+import ContactEmailSend from "@components/sectionsComponents/contactMe/ContactEmailSend.astro";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+const titleLabel = isEnglish ? "Contact" : "Contacto";
+const subtitleLabel = isEnglish
+  ? "Let's work together!"
+  : "¡Trabajemos juntos!";
 ---
 
 <div
@@ -14,11 +21,11 @@ import ContactEmailSend from "@components/es/sectionsComponents/contactMe/Contac
   >
     <div class="flex flex-col justify-center items-start">
       <h2 class="font-bold text-4xl">
-        Contacto<span class="text-primary-10 dark:text-primary-5">. </span>
+        {titleLabel}<span class="text-primary-10 dark:text-primary-5">. </span>
       </h2>
       <div class="flex flex-col justify-center gap-3">
         <h3 class="text-lg font-medium italic">
-          ¡Trabajemos juntos!<span class="text-primary-10 dark:text-primary-5">
+          {subtitleLabel}<span class="text-primary-10 dark:text-primary-5">
             :D
           </span>
         </h3>

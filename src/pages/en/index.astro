@@ -1,20 +1,22 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import Hero from "@components/en/sections/Hero.astro";
-import AboutMe from "@components/en/sections/AboutMe.astro";
-import Hobbies from "@components/en/sections/Hobbies.astro";
-import ContactMe from "@components/en/sections/ContactMe.astro";
-import ProjectsNew from "@components/en/sections/ProjectsNew.astro";
-import Technologies from "@components/en/sections/Technologies.astro";
-import Education from "@components/en/sections/Education.astro";
-import Services from "@components/en/sections/Services.astro";
+import Hero from "@components/sections/Hero.astro";
+import AboutMe from "@components/sections/AboutMe.astro";
+import Hobbies from "@components/sections/Hobbies.astro";
+import ContactMe from "@components/sections/ContactMe.astro";
+import Technologies from "@components/sections/Technologies.astro";
+import Education from "@components/sections/Education.astro";
+import Services from "@components/sections/Services.astro";
+import Projects from "@components/sections/Projects.astro";
 ---
 
 <Layout title="Portfolio | Developer">
   <section class="element">
     <Hero />
   </section>
-  <ProjectsNew />
+  <section class="element">
+    <Projects />
+  </section>
   <section class="element">
     <AboutMe />
   </section>

@@ -6,6 +6,11 @@ import {
   officeTech,
 } from "@const/techIcons";
 import { Image } from "astro:assets";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const titleLabel = isEnglish ? "Technologies" : "Tecnologías";
 ---
 
 <div
@@ -17,7 +22,7 @@ import { Image } from "astro:assets";
   >
     <div class="flex flex-col justify-start items-start mb-6">
       <h2 class="font-bold text-4xl">
-        Technologies<span class="text-primary-10 dark:text-primary-5">. </span>
+        {titleLabel}<span class="text-primary-10 dark:text-primary-5">. </span>
       </h2>
     </div>
     <div
