@@ -5,6 +5,7 @@ import EnglangFlag from "@assets/icons/Flags/EnglangFlag.astro";
 import MdiGithub from "@assets/icons/MaterialDesignIcons/MdiGithub.astro";
 import MdiLinkedin from "@assets/icons/MaterialDesignIcons/MdiLinkedin.astro";
 import { Image } from "astro:assets";
+import { techIcons } from "@const/techIcons";
 
 const pathname = Astro.url.pathname;
 const isEnglish = pathname.startsWith("/en");
@@ -22,7 +23,7 @@ const resumeLabel = isEnglish ? "Resume" : "Curriculum";
 ---
 
 <div
-  class="flex flex-col-reverse sm:flex-row items-center justify-center gap-7 h-screen"
+  class="flex flex-col-reverse sm:flex-row items-center justify-center gap-10 h-screen"
   id="presentation_section"
 >
   <div
@@ -94,15 +95,56 @@ const resumeLabel = isEnglish ? "Resume" : "Curriculum";
       </ul>
     </div>
   </div>
-  <Image
-    src="/ProfileImage.webp"
-    alt="Profile Ariano Alban | Portfolio"
-    width="192"
-    height="300"
-    class="rounded-full w-48 mt-16 sm:w-64 sm:mt-0 aspect-square"
-    loading="eager"
-    title="Profile Ariano Alban | Portfolio"
-  />
+  <div
+    class="relative flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 mt-16 sm:mt-0"
+  >
+    <Image
+      src="/ProfileImage.webp"
+      alt="Profile Ariano Alban | Portfolio"
+      width="192"
+      height="300"
+      class="rounded-full w-48 h-48 sm:w-64 sm:h-64 aspect-square z-10"
+      loading="eager"
+      title="Profile Ariano Alban | Portfolio"
+    />
+    <!-- Floating Tech Icons -->
+    <Image
+      src={techIcons["React"] as string}
+      alt="React"
+      class="floating-icon floating-icon-1"
+      width="38"
+      height="38"
+      title={"React"}
+      loading={"lazy"}
+    />
+    <Image
+      src={techIcons["Astro"] as string}
+      alt="Astro"
+      class="floating-icon floating-icon-2"
+      width="38"
+      height="38"
+      title={"Astro"}
+      loading={"lazy"}
+    />
+    <Image
+      src={techIcons["NodeJS"] as string}
+      alt="NodeJS"
+      class="floating-icon floating-icon-3"
+      width="38"
+      height="38"
+      title={"NodeJS"}
+      loading={"lazy"}
+    />
+    <Image
+      src={techIcons["NestJS"] as string}
+      alt="NestJS"
+      class="floating-icon floating-icon-4"
+      width="38"
+      height="38"
+      title={"NestJS"}
+      loading={"lazy"}
+    />
+  </div>
 </div>
 <style>
   .text-gradient {
@@ -123,5 +165,69 @@ const resumeLabel = isEnglish ? "Resume" : "Curriculum";
   }
   li {
     @apply transition-all duration-300 ease-out hover:text-primary-10 dark:hover:text-buttons-5 cursor-pointer;
+  }
+  /* Floating icons animation styles */
+  .floating-icon {
+    position: absolute;
+    z-index: 20;
+    filter: drop-shadow(0 2px 8px #0008);
+    opacity: 0.95;
+    transition: transform 0.3s;
+  }
+  .floating-icon-1 {
+    top: -18px;
+    left: 10%;
+    animation: float1 4s ease-in-out infinite;
+  }
+  .floating-icon-2 {
+    top: 20%;
+    right: -18px;
+    animation: float2 5s ease-in-out infinite;
+  }
+  .floating-icon-3 {
+    bottom: -18px;
+    left: 15%;
+    animation: float3 4.5s ease-in-out infinite;
+  }
+  .floating-icon-4 {
+    bottom: 10%;
+    right: -16px;
+    animation: float4 5.5s ease-in-out infinite;
+  }
+  @keyframes float1 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-18px) scale(1.1);
+    }
+  }
+  @keyframes float2 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(16px) scale(1.08);
+    }
+  }
+  @keyframes float3 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-12px) scale(1.12);
+    }
+  }
+  @keyframes float4 {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(14px) scale(1.07);
+    }
   }
 </style>
