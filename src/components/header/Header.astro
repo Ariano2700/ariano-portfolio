@@ -2,6 +2,20 @@
 import Image from "astro/components/Image.astro";
 import ToggleNavbar from "../toggleComponents/ToggleNavbar.astro";
 import Navbar from "./components/Navbar.astro";
+import { navItems } from "@const/navItems";
+
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const isHome = pathname === (isEnglish ? "/en/" : "/");
+const basePath = isEnglish ? "/en/" : "/";
+const items = (isEnglish ? navItems.en : navItems.es).map((item) => ({
+  ...item,
+  href: isHome ? item.href : basePath + item.href,
+}));
+const homeItem = items.find(
+  (item) => item.label === (isEnglish ? "Home" : "Inicio")
+);
 ---
 
 <header
@@ -9,7 +23,7 @@ import Navbar from "./components/Navbar.astro";
   class="flex items-center justify-between md:justify-around w-full px-6 border-b-2 text-white shadow fixed z-50 bg-primary-5/10 dark:bg-primary-10/10 filter"
 >
   <a
-    href="#presentation_section"
+    href={homeItem!.href}
     aria-label="Go to home section"
     title="Go to home section"
   >
