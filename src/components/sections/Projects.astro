@@ -1,13 +1,11 @@
 ---
-import InteractiveProjectCard from "@components/sectionsComponents/projects/InteractiveProjectCard.astro";
+import InteractiveProjectCard from "@components/sections/components/projects/InteractiveProjectCard.astro";
 import { projects, projectsEs } from "@const/projects";
 const pathname = Astro.url.pathname;
 const isEnglish = pathname.startsWith("/en");
 
 const projectsData = isEnglish ? projects : projectsEs;
-const titleLabel = isEnglish
-  ? "Projects"
-  : "Proyectos";
+const titleLabel = isEnglish ? "Projects" : "Proyectos";
 ---
 
 <div

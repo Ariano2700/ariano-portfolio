@@ -10,26 +10,25 @@ const basePath = isEnglish ? pathname.replace(/^\/en/, "") || "/" : pathname;
 ---
 
 <div class="text-lg language-selector gap-2">
-  <div
-    class="flex flex-col items-center relative transition-all duration-300 cursor-pointer"
-  >
-    {
-      isEnglish ? (
-        <a href={basePath} class="language_button" title="English">
-          EN
-          <EnglangFlag class="text-lg" />
-        </a>
-      ) : (
-        <a
-          href={`/en${basePath === "/" ? "" : basePath}`}
-          class="language_button"
-          title="Español"
-        >
-          ES
-          <PeruFlag class="text-lg" />
-        </a>
-      )
-    }
+  <div class="toggle-switch">
+    <a
+      href={basePath}
+      class={`toggle-option${!isEnglish ? " active" : ""}`}
+      aria-label="Español"
+      title="Español"
+    >
+      <PeruFlag class="text-lg" />
+      <span>ES</span>
+    </a>
+    <a
+      href={`/en${basePath === "/" ? "" : basePath}`}
+      class={`toggle-option${isEnglish ? " active" : ""}`}
+      aria-label="English"
+      title="English"
+    >
+      <EnglangFlag class="text-lg" />
+      <span>EN</span>
+    </a>
   </div>
 </div>
 <style>
@@ -38,17 +37,33 @@ const basePath = isEnglish ? pathname.replace(/^\/en/, "") || "/" : pathname;
     align-items: center;
     cursor: pointer;
   }
-
-  .language_button {
+  .toggle-switch {
     display: flex;
-    gap: 0.5rem;
+    background: #1e293b;
+    border-radius: 9999px;
+    overflow: hidden;
+    border: 1.5px solid #0891b2;
+    box-shadow: 0 2px 8px #0002;
+  }
+  .toggle-option {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    border: none;
-    background: transparent;
+    gap: 0.4rem;
+    padding: 0.3rem 0.9rem;
     font-size: 1rem;
-    cursor: pointer;
+    color: #cbd5e1;
+    background: transparent;
     text-decoration: none;
-    color: inherit;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 500;
+  }
+  .toggle-option.active {
+    background: linear-gradient(90deg, #06b6d4 60%, #8daff8 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px #0891b2aa;
+  }
+  .toggle-option:hover:not(.active) {
+    background: #334155;
+    color: #fff;
   }
 </style>

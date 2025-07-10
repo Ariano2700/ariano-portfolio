@@ -45,7 +45,7 @@ export const projects: ProjectsI[] = [
     // "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fmikhuy%20landing.PNG?alt=media&token=643151eb-14db-4d31-9007-9193fbbd535b",
     links: {
       // github: "https://github.com/Ariano2700/mikhuy-landing-astro",
-      link_page: "https://mikhuy-ld.netlify.app/",
+      link_page: "https://mikhuy.shop",
     },
     about:
       "A landing page for Mikhuy, a university cafeteria manager. Built with Astro and React, it features a modern UI, responsive design, and easy navigation. The project demonstrates teamwork and integration of multiple frontend technologies for a real-world solution.",
@@ -136,7 +136,7 @@ export const projects: ProjectsI[] = [
     ],
     imageUrl: "/projects/capture-landing.webp",
     links: {
-      link_page: "capture-landing.netlify.app",
+      link_page: "https://capture-landing.netlify.app",
     },
     about:
       "A modern landing page for a photography service. Built with Astro and TypeScript, it features elegant design, a photo gallery, and a contact form. The project emphasizes visual appeal and user engagement.",
