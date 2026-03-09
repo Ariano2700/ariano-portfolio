@@ -1,0 +1,183 @@
+---
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith("/en");
+
+const titleLabel = isEnglish ? "Services" : "Servicios";
+const subtitleLabel = isEnglish
+  ? "Solutions that transform your business"
+  : "Soluciones que transforman tu negocio";
+
+interface ServiceI {
+  icon: string;
+  title: string;
+  description: string;
+  items: string[];
+  color: string;
+  borderColor: string;
+  iconBg: string;
+}
+
+const services: ServiceI[] = isEnglish
+  ? [
+      {
+        icon: "🌐",
+        title: "Web & Tech",
+        description:
+          "Landing pages and advanced systems. From simple professional pages to full e-commerce or custom software solutions.",
+        items: [
+          "Responsive design & SEO",
+          "Contact forms & WhatsApp integration",
+          "E-Commerce & online payment gateways",
+          "Custom web systems & automation",
+          "Google Maps & external integrations",
+        ],
+        color: "text-cyan-400",
+        borderColor: "border-cyan-500/30 hover:border-cyan-400/60",
+        iconBg: "bg-cyan-500/10",
+      },
+      {
+        icon: "📈",
+        title: "Marketing & Growth",
+        description:
+          "Digital strategies to grow your brand on social media, reach more clients, and increase sales with targeted campaigns.",
+        items: [
+          "Monthly content calendar & posts",
+          "Stories, reels & video production",
+          "Meta Ads campaigns management",
+          "Community management",
+          "Detailed metrics & reports",
+        ],
+        color: "text-purple-400",
+        borderColor: "border-purple-500/30 hover:border-purple-400/60",
+        iconBg: "bg-purple-500/10",
+      },
+      {
+        icon: "✨",
+        title: "Branding",
+        description:
+          "Build and strengthen your brand identity. Define your image, voice and market presence to stand out from the competition.",
+        items: [
+          "Logo design & visual identity",
+          "Corporate brand manual",
+          "Mission, vision & values definition",
+          "Color palette & typography guide",
+          "Brand guidelines for social media",
+        ],
+        color: "text-orange-400",
+        borderColor: "border-orange-500/30 hover:border-orange-400/60",
+        iconBg: "bg-orange-500/10",
+      },
+    ]
+  : [
+      {
+        icon: "🌐",
+        title: "Web & Tech",
+        description:
+          "Landing pages y sistemas avanzados. Desde páginas simples y profesionales hasta e-commerce o software personalizado.",
+        items: [
+          "Diseño responsive y SEO",
+          "Formularios de contacto e integración con WhatsApp",
+          "E-Commerce y pasarelas de pago online",
+          "Sistemas web personalizados y automatización",
+          "Google Maps e integraciones externas",
+        ],
+        color: "text-cyan-400",
+        borderColor: "border-cyan-500/30 hover:border-cyan-400/60",
+        iconBg: "bg-cyan-500/10",
+      },
+      {
+        icon: "📈",
+        title: "Marketing & Growth",
+        description:
+          "Estrategias digitales para hacer crecer tu marca en redes sociales, llegar a más clientes y aumentar ventas con campañas efectivas.",
+        items: [
+          "Calendario de contenidos y posts mensuales",
+          "Stories, reels y producción de video",
+          "Gestión de campañas en Meta Ads",
+          "Community management",
+          "Métricas detalladas e informes",
+        ],
+        color: "text-purple-400",
+        borderColor: "border-purple-500/30 hover:border-purple-400/60",
+        iconBg: "bg-purple-500/10",
+      },
+      {
+        icon: "✨",
+        title: "Branding",
+        description:
+          "Construye y fortalece la identidad de tu marca. Define tu imagen, voz y presencia en el mercado para destacar sobre la competencia.",
+        items: [
+          "Diseño de logotipo e identidad visual",
+          "Manual de marca corporativo",
+          "Definición de misión, visión y valores",
+          "Guía de colores y tipografía",
+          "Guía de brandeo para redes sociales",
+        ],
+        color: "text-orange-400",
+        borderColor: "border-orange-500/30 hover:border-orange-400/60",
+        iconBg: "bg-orange-500/10",
+      },
+    ];
+
+const contactLabel = isEnglish ? "Request a quote" : "Solicitar cotización";
+const contactUrl = "https://wa.me/5194414315";
+---
+
+<div
+  class="rubik_font text-white flex justify-start items-center p-5 flex-col mt-5"
+  id="services_section"
+>
+  <article
+    class="flex flex-col justify-center items-start gap-4 w-full max-w-[1120px]"
+  >
+    <div class="flex flex-col justify-start items-start mb-4">
+      <h2 class="font-bold text-4xl">
+        {titleLabel}<span class="text-primary-10 dark:text-primary-5">. </span>
+      </h2>
+      <p class="text-slate-400 text-lg mt-1">{subtitleLabel}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+      {
+        services.map((service) => (
+          <div
+            class={`relative flex flex-col gap-4 p-6 rounded-2xl bg-gray-900/50 border ${service.borderColor} transition-all duration-300`}
+          >
+            <div
+              class={`${service.iconBg} w-14 h-14 rounded-xl flex items-center justify-center text-3xl`}
+            >
+              {service.icon}
+            </div>
+
+            <div>
+              <h3 class={`font-bold text-xl ${service.color}`}>
+                {service.title}
+              </h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+
+            <ul class="flex flex-col gap-2 flex-1">
+              {service.items.map((item) => (
+                <li class="flex items-start gap-2 text-sm text-slate-300">
+                  <span class={`${service.color} mt-0.5 text-xs`}>▸</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={contactUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`mt-2 text-center text-sm font-semibold py-2 px-4 rounded-lg border ${service.borderColor} ${service.color} transition-all duration-300 hover:scale-[1.02]`}
+            >
+              {contactLabel}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </article>
+</div>

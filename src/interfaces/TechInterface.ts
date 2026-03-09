@@ -26,6 +26,9 @@ export type TechnologyT =
   | "OpenAi"
   | "Gemini"
   | "Cloudinary"
+  | "Linux"
+  | "Tauri"
+  | "Rust"
   | "Astro";
 
 export type LinksT = {

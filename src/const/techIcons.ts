@@ -6,12 +6,14 @@ import NestJS from "@assets/icons/TechIcons/Backend/NestJs.svg";
 import NodeJS from "@assets/icons/TechIcons/Backend/NodeJS.svg";
 import PostgreSQL from "@assets/icons/TechIcons/Backend/PostgreSQL.svg";
 import Python from "@assets/icons/TechIcons/Backend/Python.svg";
+import Rust from "@assets/icons/TechIcons/Backend/Rust.svg";
 
 import Figma from "@assets/icons/TechIcons/Extras/Figma.svg";
 import Firebase from "@assets/icons/TechIcons/Extras/Firebase.svg";
 import Git from "@assets/icons/TechIcons/Extras/Git.svg";
 import JWT from "@assets/icons/TechIcons/Extras/JWT.svg";
 import Photoshop from "@assets/icons/TechIcons/Extras/Photoshop.svg";
+import Linux from "@assets/icons/TechIcons/Extras/Linux.svg";
 
 import Javascript from "@assets/icons/TechIcons/Frontend/Javascript.svg";
 import NextJS from "@assets/icons/TechIcons/Frontend/NextJS.svg";
@@ -20,6 +22,7 @@ import Tailwindcss from "@assets/icons/TechIcons/Frontend/Tailwindcss.svg";
 import Typescript from "@assets/icons/TechIcons/Frontend/Typescript.svg";
 import Html5 from "@assets/icons/TechIcons/Frontend/Html5.svg";
 import Css from "@assets/icons/TechIcons/Frontend/Css.png";
+import Tauri from "@assets/icons/TechIcons/Frontend/Tauri.svg";
 
 import Gemini from "@assets/icons/SVG Logos/Gemini.svg";
 import LogosCloudinaryIcon from "@assets/icons/SVG Logos/LogosCloudinaryIcon.svg";
@@ -51,6 +54,9 @@ export const techIcons: Record<TechnologyT, ImageMetadata | string> = {
   OpenAi: LogosOpenaiIcon,
   Gemini: Gemini,
   Cloudinary: LogosCloudinaryIcon,
+  Linux: Linux,
+  Tauri: Tauri,
+  Rust: Rust,
   Astro: "/DeviconAstro.webp",
 };
 
@@ -63,10 +69,10 @@ export const frontendTech: TechI[] = [
     name: "CSS",
     icon: Css,
   },
-  {
-    name: "Javascript",
-    icon: Javascript,
-  },
+  // {
+  //   name: "Javascript",
+  //   icon: Javascript,
+  // },
   {
     name: "NextJS",
     icon: NextJS,
@@ -86,6 +92,10 @@ export const frontendTech: TechI[] = [
   {
     name: "Astro",
     icon: "/DeviconAstro.webp",
+  },
+  {
+    name: "Tauri",
+    icon: Tauri,
   },
 ];
 
@@ -136,6 +146,10 @@ export const extrasTech: TechI[] = [
   {
     name: "Photoshop",
     icon: Photoshop,
+  },
+  {
+    name: "Linux",
+    icon: Linux,
   },
 ];
 

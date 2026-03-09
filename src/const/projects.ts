@@ -2,29 +2,82 @@ import type { ProjectsI } from "@interfaces/TechInterface";
 
 export const projects: ProjectsI[] = [
   {
-    title: "Bloody Room",
-    titleColor: "text-red-500",
-    dateTo: "October 9, 2024",
+    title: "Poisson Studio Website",
+    titleColor: "text-purple-300",
+    dateTo: "Septembers 2025",
     description:
-      "Halloween-themed web application where users can register and are given 4 tokens per day to upload 4 images and change their backgrounds.",
-    technology: [
-      "NextJS",
-      "OpenAi",
-      "TypeScript",
-      "NodeJS",
-      "Tailwindcss",
-      "Cloudinary",
-      "Firebase",
-    ],
-    imageUrl: "/projects/bloodyRoom.webp",
-    // imageUrl:
-    //   "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FbloodyRoom.webp?alt=media&token=58bf7a78-3581-43bd-9c09-b6503a394ec4",
+      "Website for Poisson Studio, a digital marketing agency that offers growth strategies, professional web development, and branding plans for businesses of all sizes.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css", "Html5", "React"],
+    imageUrl: "/projects/poisson.webp",
     links: {
-      github: "https://github.com/PurpleSavage/hackathon-midu-bloody-room",
-      link_page: "https://hackathon-midu-bloody-room.vercel.app/",
+      link_page: "https://poissonstudio.netlify.app/",
     },
     about:
-      "This project was developed using modern best practices. It leverages Next.js, OpenAI, and cloud services to provide a fun, interactive Halloween experience where users can personalize images daily. The stack ensures scalability, security, and a smooth user experience.",
+      "A corporate website for Poisson Studio, a digital marketing and technology agency. Built with Astro and Tailwind CSS, it showcases service plans, portfolio, team, and a contact form. Focused on visual impact, performance, and conversion.",
+  },
+  {
+    title: "Kesasoft",
+    titleColor: "text-blue-400",
+    dateTo: "February 2026",
+    description:
+      "Management software for poultry businesses. Allows companies to manage orders, payments, clients, reports, and collaborators from a single robust platform.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css", "Html5"],
+    imageUrl: "/projects/kesa.webp",
+    links: {
+      link_page: "https://www.kesasoft.com/",
+    },
+    about:
+      "A landing page and product showcase for Kesasoft, a SaaS platform designed for poultry businesses. The site highlights the platform's modules (clients, orders, payments, documents, collaborators) and subscription plans, with a focus on clarity and conversion.",
+  },
+  {
+    title: "Kesasoft App",
+    titleColor: "text-blue-400",
+    dateTo: "January 2026",
+    description:
+      "Management software for poultry businesses. Allows companies to manage orders, payments, clients, reports, and collaborators from a single robust platform.",
+    technology: ["Tauri", "Rust", "TypeScript", "Tailwindcss", "Css", "Html5"],
+    imageUrl: "/projects/kesa-app.webp",
+    links: {
+      link_page: "https://www.kesasoft.com/auth/",
+    },
+    about:
+      "A desktop application for Kesasoft, a SaaS platform designed for poultry businesses. The site highlights the platform's modules (clients, orders, payments, documents, collaborators, cash register, cash report, inventory) and subscription plans, with a focus on clarity and conversion.",
+  },
+  {
+    title: "100% Panas Fast Food",
+    titleColor: "text-orange-400",
+    dateTo: "January 2026",
+    description:
+      "Website for 100% Panas, a fast food restaurant in Piura. Features a full digital menu with burgers, combos, and sides, along with location info and customer reviews.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css", "Html5", "React"],
+    imageUrl: "/projects/100_panas.webp",
+    links: {
+      link_page: "https://100panasfastfood.com/",
+    },
+    about:
+      "A restaurant website for 100% Panas Fast Food in Piura, Peru. Presents the full menu, emphasizes fresh ingredients and fast service, and includes a map, contact details, and social links. Built to be visually appetizing and easy to navigate.",
+  },
+  {
+    title: "Dengue Cero Tumbes",
+    titleColor: "text-green-400",
+    dateTo: "December 2025",
+    description:
+      "Web system for the prevention, symptom self-assessment, and monitoring of dengue cases in the Tumbes region, Peru. Connected to MINSA for health follow-up.",
+    technology: [
+      "NextJS",
+      "TypeScript",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "NodeJS",
+      "Firebase",
+    ],
+    imageUrl: "/projects/dengue_cero_tumbes.webp",
+    links: {
+      link_page: "https://dengue-cero-tumbes.vercel.app/",
+    },
+    about:
+      "An official web system for dengue prevention in Tumbes, Peru. Users can register, complete a symptom self-assessment form, and access a real-time risk map. Reports are sent to MINSA for medical monitoring. Presented at the IESP CAP. FAP. José Abelardo Quiñones applied research innovation expo.",
   },
   {
     title: "Mikhuy landing page",
@@ -49,6 +102,52 @@ export const projects: ProjectsI[] = [
     },
     about:
       "A landing page for Mikhuy, a university cafeteria manager. Built with Astro and React, it features a modern UI, responsive design, and easy navigation. The project demonstrates teamwork and integration of multiple frontend technologies for a real-world solution.",
+  },
+  {
+    title: "Capture The Moment",
+    titleColor: "text-cyan-500",
+    dateTo: "June 24, 2025",
+    description:
+      "Capture the Moment is a landing page designed to showcase a photography service. It features a modern and elegant design, with sections highlighting the services offered, a gallery of photos, and a contact form for inquiries.",
+    technology: [
+      "Astro",
+      "TypeScript",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "Photoshop",
+    ],
+    imageUrl: "/projects/capture-landing.webp",
+    links: {
+      link_page: "https://capture-landing.netlify.app",
+    },
+    about:
+      "A modern landing page for a photography service. Built with Astro and TypeScript, it features elegant design, a photo gallery, and a contact form. The project emphasizes visual appeal and user engagement.",
+  },
+  {
+    title: "Bloody Room",
+    titleColor: "text-red-500",
+    dateTo: "October 9, 2024",
+    description:
+      "Halloween-themed web application where users can register and are given 4 tokens per day to upload 4 images and change their backgrounds.",
+    technology: [
+      "NextJS",
+      "OpenAi",
+      "TypeScript",
+      "NodeJS",
+      "Tailwindcss",
+      "Cloudinary",
+      "Firebase",
+    ],
+    imageUrl: "/projects/bloodyRoom.webp",
+    // imageUrl:
+    //   "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2FbloodyRoom.webp?alt=media&token=58bf7a78-3581-43bd-9c09-b6503a394ec4",
+    links: {
+      github: "https://github.com/PurpleSavage/hackathon-midu-bloody-room",
+      link_page: "https://hackathon-midu-bloody-room.vercel.app/",
+    },
+    about:
+      "This project was developed using modern best practices. It leverages Next.js, OpenAI, and cloud services to provide a fun, interactive Halloween experience where users can personalize images daily. The stack ensures scalability, security, and a smooth user experience.",
   },
   {
     title: "Savings plan UNMSM",
@@ -120,27 +219,6 @@ export const projects: ProjectsI[] = [
     about:
       "A Flappy Bird clone built with Canvas and JavaScript. Features sound effects and a local score counter. This project showcases game development basics, animation, and user interaction in the browser.",
   },
-  {
-    title: "Capture The Moment",
-    titleColor: "text-cyan-500",
-    dateTo: "June 24, 2025",
-    description:
-      "Capture the Moment is a landing page designed to showcase a photography service. It features a modern and elegant design, with sections highlighting the services offered, a gallery of photos, and a contact form for inquiries.",
-    technology: [
-      "Astro",
-      "TypeScript",
-      "Tailwindcss",
-      "Css",
-      "Html5",
-      "Photoshop",
-    ],
-    imageUrl: "/projects/capture-landing.webp",
-    links: {
-      link_page: "https://capture-landing.netlify.app",
-    },
-    about:
-      "A modern landing page for a photography service. Built with Astro and TypeScript, it features elegant design, a photo gallery, and a contact form. The project emphasizes visual appeal and user engagement.",
-  },
   // {
   //   title: "My Portfolio",
   //   titleColor: "text-[#61DAFB]",
@@ -157,6 +235,105 @@ export const projects: ProjectsI[] = [
 ];
 
 export const projectsEs: ProjectsI[] = [
+  {
+    title: "Poisson Studio Website",
+    titleColor: "text-purple-300",
+    dateTo: "Septiembre 2025",
+    description:
+      "Sitio web de Poisson Studio, agencia de marketing digital que ofrece estrategias de crecimiento, desarrollo web profesional y planes de branding para negocios de todos los tamaños.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css", "Html5", "React"],
+    imageUrl: "/projects/poisson.webp",
+    links: {
+      link_page: "https://poissonstudio.netlify.app/",
+    },
+    about:
+      "Sitio corporativo para Poisson Studio, agencia de marketing digital y tecnología. Desarrollado con Astro y Tailwind CSS, presenta planes de servicio, portafolio, equipo y formulario de contacto. Enfocado en impacto visual, rendimiento y conversión.",
+  },
+  {
+    title: "Kesasoft",
+    titleColor: "text-blue-400",
+    dateTo: "Febrero 2026",
+    description:
+      "Software de gestión para empresas avícolas. Permite administrar pedidos, pagos, clientes, reportes y colaboradores desde una sola plataforma robusta.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css", "Html5"],
+    imageUrl: "/projects/kesa.webp",
+    links: {
+      link_page: "https://www.kesasoft.com/",
+    },
+    about:
+      "Landing page y vitrina de producto para Kesasoft, una plataforma SaaS diseñada para empresas avícolas. El sitio muestra los módulos de la plataforma (clientes, pedidos, pagos, documentos, colaboradores) y planes de suscripción, con enfoque en claridad y conversión.",
+  },
+  {
+    title: "Kesasoft App",
+    titleColor: "text-blue-400",
+    dateTo: "Enero 2026",
+    description:
+      "Aplicación de escritorio para empresas avícolas. Permite gestionar pedidos, pagos, clientes, reportes, caja, inventario y colaboradores desde una plataforma de escritorio robusta.",
+    technology: ["Tauri", "Rust", "TypeScript", "Tailwindcss", "Css", "Html5"],
+    imageUrl: "/projects/kesa-app.webp",
+    links: {
+      link_page: "https://www.kesasoft.com/auth/",
+    },
+    about:
+      "Aplicación de escritorio para Kesasoft, plataforma SaaS diseñada para empresas avícolas. Incluye módulos de clientes, pedidos, pagos, documentos, colaboradores, caja, reportes de caja e inventario. Desarrollada con Tauri y Rust para máximo rendimiento nativo.",
+  },
+  {
+    title: "100% Panas Fast Food",
+    titleColor: "text-orange-400",
+    dateTo: "Enero 2026",
+    description:
+      "Sitio web para 100% Panas, restaurante de comida rápida en Piura. Incluye menú digital completo con hamburguesas, combos y acompañamientos, ubicación y reseñas de clientes.",
+    technology: ["Astro", "TypeScript", "Tailwindcss", "Css", "Html5", "React"],
+    imageUrl: "/projects/100_panas.webp",
+    links: {
+      link_page: "https://100panasfastfood.com/",
+    },
+    about:
+      "Sitio web para 100% Panas Fast Food en Piura, Perú. Presenta el menú completo, destaca ingredientes frescos y servicio rápido, e incluye mapa, datos de contacto y redes sociales. Desarrollado para ser visualmente atractivo y fácil de navegar.",
+  },
+  {
+    title: "Dengue Cero Tumbes",
+    titleColor: "text-green-400",
+    dateTo: "Diciembre 2025",
+    description:
+      "Sistema web para la prevención, autoevaluación de síntomas y monitoreo de casos de dengue en la región Tumbes, Perú. Conectado al MINSA para seguimiento médico.",
+    technology: [
+      "NextJS",
+      "TypeScript",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "NodeJS",
+      "Firebase",
+    ],
+    imageUrl: "/projects/dengue_cero_tumbes.webp",
+    links: {
+      link_page: "https://dengue-cero-tumbes.vercel.app/",
+    },
+    about:
+      "Sistema web oficial para la prevención del dengue en Tumbes, Perú. Los usuarios pueden registrarse, completar un formulario de autoevaluación de síntomas y acceder a un mapa de zonas de riesgo en tiempo real. Los reportes se envían al MINSA para monitoreo médico. Presentado en la expo de innovación tecnológica del IESP CAP. FAP. José Abelardo Quiñones.",
+  },
+  {
+    title: "Capture The Moment",
+    titleColor: "text-cyan-500",
+    dateTo: "24 de junio de 2025",
+    description:
+      "Capture the Moment es una landing page diseñada para mostrar un servicio de fotografía. Presenta un diseño moderno y elegante, con secciones que destacan los servicios ofrecidos, una galería de fotos y un formulario de contacto para consultas.",
+    technology: [
+      "Astro",
+      "TypeScript",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "Photoshop",
+    ],
+    imageUrl: "/projects/capture-landing.webp",
+    links: {
+      link_page: "https://capture-landing.netlify.app",
+    },
+    about:
+      "Landing page moderna para un servicio de fotografía. Desarrollada con Astro y TypeScript, presenta un diseño elegante, galería de fotos y formulario de contacto. El proyecto enfatiza el atractivo visual y la interacción con el usuario.",
+  },
   {
     title: "Bloody Room",
     titleColor: "text-red-500",
@@ -265,26 +442,5 @@ export const projectsEs: ProjectsI[] = [
     },
     about:
       "Clon de Flappy Bird realizado con Canvas y JavaScript. Incluye efectos de sonido y contador de puntos local. Este proyecto muestra conceptos básicos de desarrollo de juegos, animación e interacción en el navegador.",
-  },
-  {
-    title: "Capture The Moment",
-    titleColor: "text-cyan-500",
-    dateTo: "24 de junio de 2025",
-    description:
-      "Capture the Moment es una landing page diseñada para mostrar un servicio de fotografía. Presenta un diseño moderno y elegante, con secciones que destacan los servicios ofrecidos, una galería de fotos y un formulario de contacto para consultas.",
-    technology: [
-      "Astro",
-      "TypeScript",
-      "Tailwindcss",
-      "Css",
-      "Html5",
-      "Photoshop",
-    ],
-    imageUrl: "/projects/capture-landing.webp",
-    links: {
-      link_page: "capture-landing.netlify.app",
-    },
-    about:
-      "Landing page moderna para un servicio de fotografía. Desarrollada con Astro y TypeScript, presenta un diseño elegante, galería de fotos y formulario de contacto. El proyecto enfatiza el atractivo visual y la interacción con el usuario.",
   },
 ];

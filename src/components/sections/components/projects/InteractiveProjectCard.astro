@@ -23,7 +23,7 @@ const buttonLabel = isEnglish ? "View project" : "Ver proyecto";
   {
     projects.map((project) => (
       <a
-        href={`${pathUrl}${project.title.replace(/\s+/g, "-").toLowerCase()}`}
+        href={`${pathUrl}${project.title.replace(/%/g, "").replace(/\s+/g, "-").toLowerCase()}`}
         aria-label={`View project ${project.title}`}
         title={`View project ${project.title}`}
         class="group relative block"
