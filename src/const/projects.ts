@@ -314,6 +314,28 @@ export const projectsEs: ProjectsI[] = [
       "Sistema web oficial para la prevención del dengue en Tumbes, Perú. Los usuarios pueden registrarse, completar un formulario de autoevaluación de síntomas y acceder a un mapa de zonas de riesgo en tiempo real. Los reportes se envían al MINSA para monitoreo médico. Presentado en la expo de innovación tecnológica del IESP CAP. FAP. José Abelardo Quiñones.",
   },
   {
+    title: "Mikhuy landing page",
+    titleColor: "text-red-300",
+    dateTo: "25 de mayo de 2025",
+    description:
+      "Página principal del proyecto Mikhuy, un gestor de cafetería universitaria, proyecto grupal que está por ser desplegado.",
+    technology: [
+      "Astro",
+      "React",
+      "Tailwindcss",
+      "Css",
+      "Html5",
+      "TypeScript",
+      "Photoshop",
+    ],
+    imageUrl: "/projects/mikhuy-landing.webp",
+    links: {
+      link_page: "https://mikhuy.shop/",
+    },
+    about:
+      "Landing page para Mikhuy, gestor de cafetería universitaria. Desarrollada con Astro y React, presenta una interfaz moderna, diseño responsivo y navegación sencilla. El proyecto destaca el trabajo en equipo y la integración de tecnologías frontend para una solución real.",
+  },
+  {
     title: "Capture The Moment",
     titleColor: "text-cyan-500",
     dateTo: "24 de junio de 2025",
@@ -356,28 +378,6 @@ export const projectsEs: ProjectsI[] = [
     },
     about:
       "Este proyecto fue desarrollado utilizando las mejores prácticas de desarrollo moderno. Combina Next.js, OpenAI y servicios en la nube para ofrecer una experiencia divertida e interactiva de Halloween, permitiendo a los usuarios personalizar imágenes diariamente. La arquitectura garantiza escalabilidad, seguridad y una experiencia fluida.",
-  },
-  {
-    title: "Mikhuy landing page",
-    titleColor: "text-red-300",
-    dateTo: "25 de mayo de 2025",
-    description:
-      "Página principal del proyecto Mikhuy, un gestor de cafetería universitaria, proyecto grupal que está por ser desplegado.",
-    technology: [
-      "Astro",
-      "React",
-      "Tailwindcss",
-      "Css",
-      "Html5",
-      "TypeScript",
-      "Photoshop",
-    ],
-    imageUrl: "/projects/mikhuy-landing.webp",
-    links: {
-      link_page: "https://mikhuy-ld.netlify.app/",
-    },
-    about:
-      "Landing page para Mikhuy, gestor de cafetería universitaria. Desarrollada con Astro y React, presenta una interfaz moderna, diseño responsivo y navegación sencilla. El proyecto destaca el trabajo en equipo y la integración de tecnologías frontend para una solución real.",
   },
   {
     title: "Savings plan UNMSM",
