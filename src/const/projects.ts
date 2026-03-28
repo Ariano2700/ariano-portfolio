@@ -44,6 +44,20 @@ export const projects: ProjectsI[] = [
       "A desktop application for Kesasoft, a SaaS platform designed for poultry businesses. The site highlights the platform's modules (clients, orders, payments, documents, collaborators, cash register, cash report, inventory) and subscription plans, with a focus on clarity and conversion.",
   },
   {
+    title: "TVSol",
+    titleColor: "text-yellow-400",
+    dateTo: "March 2026",
+    description:
+      "News portal delivering reliable local journalism, independent reporting, and community-focused updates 24/7.",
+    technology: ["Astro", "TypeScript", "Tailwindcss"],
+    imageUrl: "/projects/tvsol_hero.PNG",
+    links: {
+      link_page: "https://tvsol.netlify.app/",
+    },
+    about:
+      "TVSol news portal providing trusted local news with independent journalism for the community. Features a modern landing page optimized for fast loading, clean design, and local content focus. Built to foster trust and real-time community engagement.",
+  },
+  {
     title: "100% Panas Fast Food",
     titleColor: "text-orange-400",
     dateTo: "January 2026",
@@ -276,6 +290,20 @@ export const projectsEs: ProjectsI[] = [
     },
     about:
       "Aplicación de escritorio para Kesasoft, plataforma SaaS diseñada para empresas avícolas. Incluye módulos de clientes, pedidos, pagos, documentos, colaboradores, caja, reportes de caja e inventario. Desarrollada con Tauri y Rust para máximo rendimiento nativo.",
+  },
+  {
+    title: "TVSol",
+    titleColor: "text-yellow-400",
+    dateTo: "Marzo 2026",
+    description:
+      "Portal de noticias que entrega periodismo local confiable, reportajes independientes y actualizaciones enfocadas en la comunidad las 24/7.",
+    technology: ["Astro", "TypeScript", "Tailwindcss"],
+    imageUrl: "/projects/tvsol_hero.PNG",
+    links: {
+      link_page: "https://tvsol.netlify.app/",
+    },
+    about:
+      "Portal de noticias TVSol, fuente confiable de noticias locales con periodismo veraz e independiente para la comunidad. Cuenta con una landing moderna optimizada para carga rápida, diseño limpio y enfoque en contenido local relevante. Desarrollado para fomentar confianza y compromiso comunitario en tiempo real.",
   },
   {
     title: "100% Panas Fast Food",
