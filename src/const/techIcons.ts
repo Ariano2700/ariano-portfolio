@@ -7,6 +7,7 @@ import NodeJS from "@assets/icons/TechIcons/Backend/NodeJS.svg";
 import PostgreSQL from "@assets/icons/TechIcons/Backend/PostgreSQL.svg";
 import Python from "@assets/icons/TechIcons/Backend/Python.svg";
 import Rust from "@assets/icons/TechIcons/Backend/Rust.svg";
+import Sanity from "@assets/icons/TechIcons/Backend/Sanity.svg";
 
 import Figma from "@assets/icons/TechIcons/Extras/Figma.svg";
 import Firebase from "@assets/icons/TechIcons/Extras/Firebase.svg";
@@ -57,6 +58,7 @@ export const techIcons: Record<TechnologyT, ImageMetadata | string> = {
   Linux: Linux,
   Tauri: Tauri,
   Rust: Rust,
+  Sanity: Sanity,
   Astro: "/DeviconAstro.webp",
 };
 
@@ -123,6 +125,10 @@ export const backendTech: TechI[] = [
   {
     name: "Python",
     icon: Python,
+  },
+  {
+    name: "Sanity",
+    icon: Sanity,
   },
 ];
 

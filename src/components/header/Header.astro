@@ -14,7 +14,7 @@ const items = (isEnglish ? navItems.en : navItems.es).map((item) => ({
   href: isHome ? item.href : basePath + item.href,
 }));
 const homeItem = items.find(
-  (item) => item.label === (isEnglish ? "Home" : "Inicio")
+  (item) => item.label === (isEnglish ? "Home" : "Inicio"),
 );
 ---
 
@@ -33,7 +33,7 @@ const homeItem = items.find(
       height="80"
       alt="Fonotipo"
       class="hidden md:flex"
-      loading="lazy"
+      loading="eager"
       title={"Ariano Alban Logo"}
     />
     <Image
@@ -42,7 +42,7 @@ const homeItem = items.find(
       height="80"
       alt="Logotipo"
       class="p-4 flex md:hidden"
-      loading="lazy"
+      loading="eager"
       title={"Ariano Alban Logo"}
     />
   </a>

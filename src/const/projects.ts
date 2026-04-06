@@ -2,6 +2,20 @@ import type { ProjectsI } from "@interfaces/TechInterface";
 
 export const projects: ProjectsI[] = [
   {
+    title: "La Fortaleza Ferretería",
+    titleColor: "text-amber-600",
+    dateTo: "April 2026",
+    description:
+      "Online hardware store focused on construction, featuring clear categories, fast WhatsApp inquiries, and specialized support for wholesale clients and contractors.",
+    technology: ["Astro", "Sanity", "TypeScript", "Tailwindcss", "React"],
+    imageUrl: "/projects/la-fortaleza-hero.PNG",
+    links: {
+      link_page: "https://lafortalezaferreteria.netlify.app/",
+    },
+    about:
+      "A specialized hardware platform for builders and wholesalers in Tumbes, Peru. It offers a catalog of over 100 products, immediate quote requests through WhatsApp, and streamlined logistics for large-scale projects.",
+  },
+  {
     title: "Poisson Studio Website",
     titleColor: "text-purple-300",
     dateTo: "Septembers 2025",
@@ -233,22 +247,23 @@ export const projects: ProjectsI[] = [
     about:
       "A Flappy Bird clone built with Canvas and JavaScript. Features sound effects and a local score counter. This project showcases game development basics, animation, and user interaction in the browser.",
   },
-  // {
-  //   title: "My Portfolio",
-  //   titleColor: "text-[#61DAFB]",
-  //   dateTo: "October 28, 2024",
-  //   description:
-  //     "This page is made in Astro. Here is where I show a little about me and my work, my hobbies, etc.",
-  //   technology: ["Astro", "TypeScript", "Tailwindcss", "Css3"],
-  //   links: {
-  //     github: "https://github.com/Ariano2700/ariano-portfolio",
-  //   },
-  //   imageUrl:
-  //     "https://firebasestorage.googleapis.com/v0/b/portfolio-ariano.appspot.com/o/imagesProjects%2Fportfolio.PNG?alt=media&token=62cc0836-cf75-4e8e-8e7e-2977af4f916b",
-  // },
 ];
 
 export const projectsEs: ProjectsI[] = [
+  {
+    title: "La Fortaleza Ferretería",
+    titleColor: "text-amber-600",
+    dateTo: "Abril 2026",
+    description:
+      "Ferretería online con foco en obra, categorías claras, consulta rápida por WhatsApp y atención técnica especializada para clientes mayoristas y contratistas.",
+    technology: ["Astro", "Sanity", "TypeScript", "Tailwindcss", "React"],
+    imageUrl: "/projects/la-fortaleza-hero.PNG",
+    links: {
+      link_page: "https://lafortalezaferreteria.netlify.app/",
+    },
+    about:
+      "Plataforma de ferretería especializada para constructores y mayoristas en Tumbes, Perú. Ofrece un catálogo de más de 100 productos, solicitud inmediata de cotizaciones por WhatsApp y logística ágil para proyectos de gran escala.",
+  },
   {
     title: "Poisson Studio Website",
     titleColor: "text-purple-300",

@@ -26,6 +26,7 @@ export type TechnologyT =
   | "OpenAi"
   | "Gemini"
   | "Cloudinary"
+  | "Sanity"
   | "Linux"
   | "Tauri"
   | "Rust"
