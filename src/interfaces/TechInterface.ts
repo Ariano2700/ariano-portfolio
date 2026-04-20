@@ -30,6 +30,7 @@ export type TechnologyT =
   | "Linux"
   | "Tauri"
   | "Rust"
+  | "OpenAI"
   | "Astro";
 
 export type LinksT = {

@@ -26,6 +26,7 @@ import Css from "@assets/icons/TechIcons/Frontend/Css.png";
 import Tauri from "@assets/icons/TechIcons/Frontend/Tauri.svg";
 
 import Gemini from "@assets/icons/SVG Logos/Gemini.svg";
+import OpenAI from "@assets/icons/SVG Logos/OpenAI.svg";
 import LogosCloudinaryIcon from "@assets/icons/SVG Logos/LogosCloudinaryIcon.svg";
 import LogosOpenaiIcon from "@assets/icons/SVG Logos/LogosOpenaiIcon.svg";
 
@@ -59,6 +60,7 @@ export const techIcons: Record<TechnologyT, ImageMetadata | string> = {
   Tauri: Tauri,
   Rust: Rust,
   Sanity: Sanity,
+  OpenAI: OpenAI,
   Astro: "/DeviconAstro.webp",
 };
 

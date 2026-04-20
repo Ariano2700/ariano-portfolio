@@ -2,6 +2,20 @@ import type { ProjectsI } from "@interfaces/TechInterface";
 
 export const projects: ProjectsI[] = [
   {
+    title: "Tumbes Chic Closet Sale",
+    titleColor: "text-pink-400",
+    dateTo: "April 2026",
+    description:
+      "Curated online closet sale for Tumbes, Peru. Features sustainable fashion, unique finds, and AI-powered outfit recommendations. Built with Astro, Sanity, Tailwind, CSS, and OpenAI.",
+    technology: ["Astro", "Sanity", "Tailwindcss", "Css", "OpenAi"],
+    imageUrl: "/projects/tumbes-chic-hero.PNG",
+    links: {
+      link_page: "https://tumbeschic.netlify.app/",
+    },
+    about:
+      "A sustainable fashion e-commerce for Tumbes, Peru. Offers curated clothing, WhatsApp shopping, and AI outfit recommendations. Built with Astro, Sanity, Tailwind, CSS, and OpenAI for a modern, interactive experience.",
+  },
+  {
     title: "La Fortaleza Ferretería",
     titleColor: "text-amber-600",
     dateTo: "April 2026",
@@ -250,6 +264,20 @@ export const projects: ProjectsI[] = [
 ];
 
 export const projectsEs: ProjectsI[] = [
+  {
+    title: "Tumbes Chic Closet Sale",
+    titleColor: "text-pink-400",
+    dateTo: "Abril 2026",
+    description:
+      "Closet sale curado en línea para Tumbes, Perú. Moda sostenible, hallazgos únicos y recomendaciones de looks con IA. Hecho con Astro, Sanity, Tailwind, CSS y OpenAI.",
+    technology: ["Astro", "Sanity", "Tailwindcss", "Css", "OpenAi"],
+    imageUrl: "/projects/tumbes-chic-hero.PNG",
+    links: {
+      link_page: "https://tumbeschic.netlify.app/",
+    },
+    about:
+      "E-commerce de moda sostenible para Tumbes, Perú. Ofrece prendas curadas, compras por WhatsApp y recomendaciones de looks con IA. Desarrollado con Astro, Sanity, Tailwind, CSS y OpenAI para una experiencia moderna e interactiva.",
+  },
   {
     title: "La Fortaleza Ferretería",
     titleColor: "text-amber-600",
